@@ -5,3 +5,6 @@ Tablolarımı oluşturdum ve ilişkilerini kurdum  dbfirst yaklaşımı ile c# f
 Form tarafında Bankalar arayüzü tasarladım bir sonraki adımda bunların içini dolduracağım.
 ![Screenshot 2025-02-26 153029](https://github.com/user-attachments/assets/1fbc16b1-4a43-403c-a2f6-8d1f548721eb)
 *******************************************************************************************************************************
+Entity framework ile geliştirdiğim uygulamada bankalar ve giderler formlarını tamamladım.
+![Screenshot 2025-02-26 174937](https://github.com/user-attachments/assets/a4b5ee3b-11bd-4de7-9598-6df8c38ccd30)
+![Screenshot 2025-02-26 174942](https://github.com/user-attachments/assets/77cabbfb-506a-44de-8ddd-f5d187c8e4ce)
