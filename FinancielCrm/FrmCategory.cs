@@ -64,7 +64,15 @@ namespace FinancielCrm
 
         private void btn_LogOut_Click(object sender, EventArgs e)
         {
-           //Çıkış yapmak istediğine emin misin?
+            DialogResult sonuc = MessageBox.Show("Devam etmek istiyor musunuz?", "Onay", MessageBoxButtons.YesNo);
+
+            if (sonuc == DialogResult.Yes)
+            {
+                // "Evet" seçildiğinde yapılacak işlemler
+                FrmLogin frm = new FrmLogin();
+                frm.Show();
+                this.Close();
+            }
         }
     }
 }

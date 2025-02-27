@@ -193,6 +193,7 @@
             this.Name = "FrmFaturalarcs";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmFaturalar";
+            this.Load += new System.EventHandler(this.FrmFaturalarcs_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

@@ -19,7 +19,15 @@ namespace FinancielCrm
 
         private void btn_LogOut_Click(object sender, EventArgs e)
         {
-            //wminmisin
+            DialogResult sonuc = MessageBox.Show("Devam etmek istiyor musunuz?", "Onay", MessageBoxButtons.YesNo);
+
+            if (sonuc == DialogResult.Yes)
+            {
+                // "Evet" seçildiğinde yapılacak işlemler
+                FrmLogin frm = new FrmLogin();
+                frm.Show();
+                this.Close();
+            }
         }
 
         private void btn_category_Click(object sender, EventArgs e)
@@ -70,6 +78,11 @@ namespace FinancielCrm
             settings.Show();
                 
             this.Close();
+        }
+
+        private void FrmFaturalarcs_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -112,40 +112,48 @@ namespace FinancielCrm
         {
             FrmBilling frmBilling = new FrmBilling();
             frmBilling.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             FrmCategory frmCategory = new FrmCategory();
             frmCategory.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void btn_fatura_Click(object sender, EventArgs e)
         {
             FrmFaturalarcs frm = new FrmFaturalarcs();
             frm.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void btn_hareket_Click(object sender, EventArgs e)
         {
             FrmBankaHareket frmBank=new FrmBankaHareket();
             frmBank.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void btn_settings_Click(object sender, EventArgs e)
         {
             FrmAyarlar frm = new FrmAyarlar();
             frm.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void btn_LogOut_Click(object sender, EventArgs e)
         {
-         //çıkış emin
+            DialogResult sonuc = MessageBox.Show("Devam etmek istiyor musunuz?", "Onay", MessageBoxButtons.YesNo);
+
+            if (sonuc == DialogResult.Yes)
+            {
+                // "Evet" seçildiğinde yapılacak işlemler
+                FrmLogin frm = new FrmLogin();
+                frm.Show();
+                this.Close();
+            }
         }
 
         private void btn_dashboard_Click(object sender, EventArgs e)
