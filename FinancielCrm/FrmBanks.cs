@@ -44,11 +44,46 @@ namespace FinancielCrm
             lbl_Proccess4.Text = BankProccess4.Amount + " " + BankProccess4.BankDescription + " " + BankProccess4.ProccessDate;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+
+        private void btn_category_Click(object sender, EventArgs e)
         {
-            FrmBilling frmBilling = new FrmBilling();
-            frmBilling.ShowDialog();
+            FrmCategory frm = new FrmCategory();
+            frm.Show();
             this.Close();
+        }
+
+        private void btn_fatura_Click(object sender, EventArgs e)
+        { FrmFaturalarcs frm = new FrmFaturalarcs();
+            frm.Show();
+            this.Close();
+        }
+
+        private void btn_BillsForm_Click(object sender, EventArgs e)
+        {  FrmBilling frm = new FrmBilling();
+            frm.Show();
+            this.Close();
+        }
+
+        private void btn_hareket_Click(object sender, EventArgs e)
+        { FrmBankaHareket frm = new FrmBankaHareket();
+            frm.Show();
+            this.Close();
+        }
+
+        private void btn_dashboard_Click(object sender, EventArgs e)
+        { FrmDashBoard frm = new FrmDashBoard();
+            frm.Show();
+            this.Close();
+        }
+
+        private void btn_settings_Click(object sender, EventArgs e)
+        { FrmAyarlar frm = new FrmAyarlar();
+            frm.Show();
+            this.Close();
+        }
+
+        private void btn_LogOut_Click(object sender, EventArgs e)
+        {     //Çıkış yapmak istediğine emin misin?
         }
     }
 }

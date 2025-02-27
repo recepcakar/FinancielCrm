@@ -72,7 +72,7 @@ namespace FinancielCrm
         private void button4_Click(object sender, EventArgs e)
         {
             FrmBanks frmBanks = new FrmBanks();
-            frmBanks.ShowDialog();
+            frmBanks.Show();
             this.Hide();
         }
 
@@ -106,6 +106,51 @@ namespace FinancielCrm
                 lbl_BillAmount.Text = values.ToString() + " ₺";
 
             }
+        }
+
+        private void btn_BillsForm_Click(object sender, EventArgs e)
+        {
+            FrmBilling frmBilling = new FrmBilling();
+            frmBilling.Show();
+            this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FrmCategory frmCategory = new FrmCategory();
+            frmCategory.Show();
+            this.Hide();
+        }
+
+        private void btn_fatura_Click(object sender, EventArgs e)
+        {
+            FrmFaturalarcs frm = new FrmFaturalarcs();
+            frm.Show();
+            this.Hide();
+        }
+
+        private void btn_hareket_Click(object sender, EventArgs e)
+        {
+            FrmBankaHareket frmBank=new FrmBankaHareket();
+            frmBank.Show();
+            this.Hide();
+        }
+
+        private void btn_settings_Click(object sender, EventArgs e)
+        {
+            FrmAyarlar frm = new FrmAyarlar();
+            frm.Show();
+            this.Hide();
+        }
+
+        private void btn_LogOut_Click(object sender, EventArgs e)
+        {
+         //çıkış emin
+        }
+
+        private void btn_dashboard_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

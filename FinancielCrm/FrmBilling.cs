@@ -78,6 +78,60 @@ namespace FinancielCrm
         {
             var values = db.Bills.ToList();
             dataGridView1.DataSource = values;
+        }       
+
+        private void btn_category_Click(object sender, EventArgs e)
+        {
+            FrmCategory category = new FrmCategory();
+             category.Show();
+            this.Close();
+
+        }
+
+        private void btn_Banks_Click(object sender, EventArgs e)
+        {
+            FrmBanks banks = new FrmBanks();
+            banks.Show();
+            this.Close();
+        }
+
+        private void btn_fatura_Click(object sender, EventArgs e)
+        {
+            FrmFaturalarcs fat=new FrmFaturalarcs();    
+            fat.Show();
+            this.Close();
+        }
+
+        private void btn_BillsForm_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_hareket_Click(object sender, EventArgs e)
+        {
+            FrmBankaHareket bank = new FrmBankaHareket();
+            bank.Show();
+            this.Close();
+        }
+
+        private void btn_dashboard_Click(object sender, EventArgs e)
+        {
+            FrmDashBoard dashboard = new FrmDashBoard();
+            dashboard.Show();
+            this.Close();
+        }
+
+        private void btn_settings_Click(object sender, EventArgs e)
+        {
+            FrmAyarlar settings = new FrmAyarlar();
+            settings.Show();
+            this.Close();
+
+        }
+
+        private void btn_LogOut_Click(object sender, EventArgs e)
+        {
+            //Emin misiniz?
         }
     }
 }
