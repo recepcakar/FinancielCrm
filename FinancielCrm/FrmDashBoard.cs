@@ -41,6 +41,7 @@ namespace FinancielCrm
             }).ToList();
             chart1.Series.Clear();
             var series = chart1.Series.Add("Bankalar");
+            series.ChartType=SeriesChartType.Doughnut;
            // series.Points.AddXY(BankData.Select(x=>x.BankTitle),BankData.Select(y=>y.BankBalance));
            foreach(var item in BankData)
             {
@@ -56,6 +57,7 @@ namespace FinancielCrm
             }).ToList();
             chart2.Series.Clear();
             var series2 = chart2.Series.Add("Faturalar");
+            
             series2.ChartType=SeriesChartType.Doughnut;
 
             foreach (var item in values) 
