@@ -15,3 +15,5 @@ Bu bölümde son görevimi tamamlayarak eğitim kampını başarıyla bitirdim. 
 *******************************************************************************************************************************
 Yeni formları oluşturdum, buton panelini ekleyerek formlar arası geçişi tüm formlarda sağladım. Şimdi tasarım aşaması ve Entity Framework ile verileri getirme kısmı kaldı.
 *******************************************************************************************************************************
+Login Sayfamı oluşturdum arka plan için pictureBox kullandım 
+![Screenshot 2025-02-27 161357](https://github.com/user-attachments/assets/9798cdf5-3a88-43bb-a391-b2dbb58939fc)
