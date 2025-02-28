@@ -45,6 +45,9 @@ namespace FinancielCrm
             }
         }
 
-      
+        private void linklbl_PasswordLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            MessageBox.Show("Şuanlık kullanılamıyor");
+        }
     }
 }

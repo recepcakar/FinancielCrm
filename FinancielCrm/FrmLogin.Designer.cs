@@ -119,7 +119,6 @@
             this.txt_password.Size = new System.Drawing.Size(176, 28);
             this.txt_password.TabIndex = 4;
             this.txt_password.Text = "Password";
-         
             // 
             // btn_Login
             // 
@@ -163,6 +162,7 @@
             // 
             // linklbl_PasswordLink
             // 
+            this.linklbl_PasswordLink.ActiveLinkColor = System.Drawing.Color.DimGray;
             this.linklbl_PasswordLink.AutoSize = true;
             this.linklbl_PasswordLink.Location = new System.Drawing.Point(395, 333);
             this.linklbl_PasswordLink.Name = "linklbl_PasswordLink";
@@ -170,6 +170,7 @@
             this.linklbl_PasswordLink.TabIndex = 6;
             this.linklbl_PasswordLink.TabStop = true;
             this.linklbl_PasswordLink.Text = "Şifremi unuttum";
+            this.linklbl_PasswordLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklbl_PasswordLink_LinkClicked);
             // 
             // FrmLogin
             // 

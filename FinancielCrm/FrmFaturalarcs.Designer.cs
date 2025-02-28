@@ -37,7 +37,37 @@
             this.btn_settings = new System.Windows.Forms.Button();
             this.btn_category = new System.Windows.Forms.Button();
             this.btn_fatura = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lbl_elektriktarih = new System.Windows.Forms.Label();
+            this.btn_Elektrik = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_elektrikAmount = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.lbl_dogalgaztarih = new System.Windows.Forms.Label();
+            this.btn_Dogalgaz = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lbl_DogalgazAmount = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.lbl_SuTarih = new System.Windows.Forms.Label();
+            this.btn_Su = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lbl_SuAmount = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.lbl_IntTarih = new System.Windows.Forms.Label();
+            this.btn_Int = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lbl_IntAmount = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.LBL_TelTarih = new System.Windows.Forms.Label();
+            this.btn_Tel = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lbl_TelAmount = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -184,17 +214,313 @@
             this.btn_fatura.UseVisualStyleBackColor = false;
             this.btn_fatura.Click += new System.EventHandler(this.btn_fatura_Click);
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.lbl_elektriktarih);
+            this.panel2.Controls.Add(this.btn_Elektrik);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.lbl_elektrikAmount);
+            this.panel2.Location = new System.Drawing.Point(1, 147);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(872, 63);
+            this.panel2.TabIndex = 4;
+            // 
+            // lbl_elektriktarih
+            // 
+            this.lbl_elektriktarih.AutoSize = true;
+            this.lbl_elektriktarih.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl_elektriktarih.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lbl_elektriktarih.Location = new System.Drawing.Point(439, 23);
+            this.lbl_elektriktarih.Name = "lbl_elektriktarih";
+            this.lbl_elektriktarih.Size = new System.Drawing.Size(52, 20);
+            this.lbl_elektriktarih.TabIndex = 3;
+            this.lbl_elektriktarih.Text = "Tarih";
+            // 
+            // btn_Elektrik
+            // 
+            this.btn_Elektrik.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_Elektrik.ForeColor = System.Drawing.Color.DarkGreen;
+            this.btn_Elektrik.Location = new System.Drawing.Point(659, 15);
+            this.btn_Elektrik.Name = "btn_Elektrik";
+            this.btn_Elektrik.Size = new System.Drawing.Size(182, 37);
+            this.btn_Elektrik.TabIndex = 2;
+            this.btn_Elektrik.Text = "Ödendi";
+            this.btn_Elektrik.UseVisualStyleBackColor = true;
+            this.btn_Elektrik.Click += new System.EventHandler(this.btn_Elektrik_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label1.Location = new System.Drawing.Point(8, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(136, 22);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Elektrik faturası :";
+            // 
+            // lbl_elektrikAmount
+            // 
+            this.lbl_elektrikAmount.AutoSize = true;
+            this.lbl_elektrikAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl_elektrikAmount.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbl_elektrikAmount.Location = new System.Drawing.Point(193, 22);
+            this.lbl_elektrikAmount.Name = "lbl_elektrikAmount";
+            this.lbl_elektrikAmount.Size = new System.Drawing.Size(66, 22);
+            this.lbl_elektrikAmount.TabIndex = 1;
+            this.lbl_elektrikAmount.Text = "0.00 ₺";
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.lbl_dogalgaztarih);
+            this.panel3.Controls.Add(this.btn_Dogalgaz);
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.lbl_DogalgazAmount);
+            this.panel3.Location = new System.Drawing.Point(1, 216);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(872, 63);
+            this.panel3.TabIndex = 4;
+            // 
+            // lbl_dogalgaztarih
+            // 
+            this.lbl_dogalgaztarih.AutoSize = true;
+            this.lbl_dogalgaztarih.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl_dogalgaztarih.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lbl_dogalgaztarih.Location = new System.Drawing.Point(439, 24);
+            this.lbl_dogalgaztarih.Name = "lbl_dogalgaztarih";
+            this.lbl_dogalgaztarih.Size = new System.Drawing.Size(52, 20);
+            this.lbl_dogalgaztarih.TabIndex = 3;
+            this.lbl_dogalgaztarih.Text = "Tarih";
+            // 
+            // btn_Dogalgaz
+            // 
+            this.btn_Dogalgaz.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_Dogalgaz.ForeColor = System.Drawing.Color.DarkGreen;
+            this.btn_Dogalgaz.Location = new System.Drawing.Point(659, 14);
+            this.btn_Dogalgaz.Name = "btn_Dogalgaz";
+            this.btn_Dogalgaz.Size = new System.Drawing.Size(182, 37);
+            this.btn_Dogalgaz.TabIndex = 2;
+            this.btn_Dogalgaz.Text = "Ödendi";
+            this.btn_Dogalgaz.UseVisualStyleBackColor = true;
+            this.btn_Dogalgaz.Click += new System.EventHandler(this.btn_Dogalgaz_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label2.Location = new System.Drawing.Point(8, 22);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(148, 22);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Doğalgaz faturası :";
+            // 
+            // lbl_DogalgazAmount
+            // 
+            this.lbl_DogalgazAmount.AutoSize = true;
+            this.lbl_DogalgazAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl_DogalgazAmount.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbl_DogalgazAmount.Location = new System.Drawing.Point(193, 22);
+            this.lbl_DogalgazAmount.Name = "lbl_DogalgazAmount";
+            this.lbl_DogalgazAmount.Size = new System.Drawing.Size(66, 22);
+            this.lbl_DogalgazAmount.TabIndex = 1;
+            this.lbl_DogalgazAmount.Text = "0.00 ₺";
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.lbl_SuTarih);
+            this.panel4.Controls.Add(this.btn_Su);
+            this.panel4.Controls.Add(this.label3);
+            this.panel4.Controls.Add(this.lbl_SuAmount);
+            this.panel4.Location = new System.Drawing.Point(1, 285);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(872, 63);
+            this.panel4.TabIndex = 4;
+            // 
+            // lbl_SuTarih
+            // 
+            this.lbl_SuTarih.AutoSize = true;
+            this.lbl_SuTarih.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl_SuTarih.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lbl_SuTarih.Location = new System.Drawing.Point(439, 22);
+            this.lbl_SuTarih.Name = "lbl_SuTarih";
+            this.lbl_SuTarih.Size = new System.Drawing.Size(52, 20);
+            this.lbl_SuTarih.TabIndex = 3;
+            this.lbl_SuTarih.Text = "Tarih";
+            // 
+            // btn_Su
+            // 
+            this.btn_Su.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_Su.ForeColor = System.Drawing.Color.DarkGreen;
+            this.btn_Su.Location = new System.Drawing.Point(659, 13);
+            this.btn_Su.Name = "btn_Su";
+            this.btn_Su.Size = new System.Drawing.Size(182, 37);
+            this.btn_Su.TabIndex = 2;
+            this.btn_Su.Text = "Ödendi";
+            this.btn_Su.UseVisualStyleBackColor = true;
+            this.btn_Su.Click += new System.EventHandler(this.btn_Su_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label3.Location = new System.Drawing.Point(8, 22);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(103, 22);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Su faturası : ";
+            // 
+            // lbl_SuAmount
+            // 
+            this.lbl_SuAmount.AutoSize = true;
+            this.lbl_SuAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl_SuAmount.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbl_SuAmount.Location = new System.Drawing.Point(193, 22);
+            this.lbl_SuAmount.Name = "lbl_SuAmount";
+            this.lbl_SuAmount.Size = new System.Drawing.Size(66, 22);
+            this.lbl_SuAmount.TabIndex = 1;
+            this.lbl_SuAmount.Text = "0.00 ₺";
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.lbl_IntTarih);
+            this.panel5.Controls.Add(this.btn_Int);
+            this.panel5.Controls.Add(this.label4);
+            this.panel5.Controls.Add(this.lbl_IntAmount);
+            this.panel5.Location = new System.Drawing.Point(1, 354);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(872, 63);
+            this.panel5.TabIndex = 4;
+            // 
+            // lbl_IntTarih
+            // 
+            this.lbl_IntTarih.AutoSize = true;
+            this.lbl_IntTarih.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl_IntTarih.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lbl_IntTarih.Location = new System.Drawing.Point(439, 24);
+            this.lbl_IntTarih.Name = "lbl_IntTarih";
+            this.lbl_IntTarih.Size = new System.Drawing.Size(52, 20);
+            this.lbl_IntTarih.TabIndex = 3;
+            this.lbl_IntTarih.Text = "Tarih";
+            // 
+            // btn_Int
+            // 
+            this.btn_Int.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_Int.ForeColor = System.Drawing.Color.DarkGreen;
+            this.btn_Int.Location = new System.Drawing.Point(659, 15);
+            this.btn_Int.Name = "btn_Int";
+            this.btn_Int.Size = new System.Drawing.Size(182, 37);
+            this.btn_Int.TabIndex = 2;
+            this.btn_Int.Text = "Ödendi";
+            this.btn_Int.UseVisualStyleBackColor = true;
+            this.btn_Int.Click += new System.EventHandler(this.btn_Int_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label4.Location = new System.Drawing.Point(8, 22);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(141, 22);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "İnternet faturası :";
+            // 
+            // lbl_IntAmount
+            // 
+            this.lbl_IntAmount.AutoSize = true;
+            this.lbl_IntAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl_IntAmount.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbl_IntAmount.Location = new System.Drawing.Point(193, 22);
+            this.lbl_IntAmount.Name = "lbl_IntAmount";
+            this.lbl_IntAmount.Size = new System.Drawing.Size(66, 22);
+            this.lbl_IntAmount.TabIndex = 1;
+            this.lbl_IntAmount.Text = "0,00 ₺";
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.LBL_TelTarih);
+            this.panel6.Controls.Add(this.btn_Tel);
+            this.panel6.Controls.Add(this.label5);
+            this.panel6.Controls.Add(this.lbl_TelAmount);
+            this.panel6.Location = new System.Drawing.Point(1, 423);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(872, 63);
+            this.panel6.TabIndex = 4;
+            // 
+            // LBL_TelTarih
+            // 
+            this.LBL_TelTarih.AutoSize = true;
+            this.LBL_TelTarih.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.LBL_TelTarih.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.LBL_TelTarih.Location = new System.Drawing.Point(439, 24);
+            this.LBL_TelTarih.Name = "LBL_TelTarih";
+            this.LBL_TelTarih.Size = new System.Drawing.Size(52, 20);
+            this.LBL_TelTarih.TabIndex = 3;
+            this.LBL_TelTarih.Text = "Tarih";
+            // 
+            // btn_Tel
+            // 
+            this.btn_Tel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_Tel.ForeColor = System.Drawing.Color.DarkGreen;
+            this.btn_Tel.Location = new System.Drawing.Point(659, 17);
+            this.btn_Tel.Name = "btn_Tel";
+            this.btn_Tel.Size = new System.Drawing.Size(182, 37);
+            this.btn_Tel.TabIndex = 2;
+            this.btn_Tel.Text = "Ödendi";
+            this.btn_Tel.UseVisualStyleBackColor = true;
+            this.btn_Tel.Click += new System.EventHandler(this.btn_Tel_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label5.Location = new System.Drawing.Point(8, 22);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(135, 22);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Telefon faturası :";
+            // 
+            // lbl_TelAmount
+            // 
+            this.lbl_TelAmount.AutoSize = true;
+            this.lbl_TelAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl_TelAmount.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbl_TelAmount.Location = new System.Drawing.Point(193, 22);
+            this.lbl_TelAmount.Name = "lbl_TelAmount";
+            this.lbl_TelAmount.Size = new System.Drawing.Size(66, 22);
+            this.lbl_TelAmount.TabIndex = 1;
+            this.lbl_TelAmount.Text = "0.00 ₺";
+            // 
             // FrmFaturalarcs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(885, 483);
+            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "FrmFaturalarcs";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmFaturalar";
             this.Load += new System.EventHandler(this.FrmFaturalarcs_Load);
             this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -210,5 +536,30 @@
         private System.Windows.Forms.Button btn_settings;
         private System.Windows.Forms.Button btn_category;
         private System.Windows.Forms.Button btn_fatura;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btn_Elektrik;
+        private System.Windows.Forms.Label lbl_elektrikAmount;
+        private System.Windows.Forms.Label lbl_DogalgazAmount;
+        private System.Windows.Forms.Label lbl_SuAmount;
+        private System.Windows.Forms.Label lbl_IntAmount;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lbl_TelAmount;
+        private System.Windows.Forms.Label lbl_elektriktarih;
+        private System.Windows.Forms.Label lbl_dogalgaztarih;
+        private System.Windows.Forms.Label lbl_SuTarih;
+        private System.Windows.Forms.Label lbl_IntTarih;
+        private System.Windows.Forms.Label LBL_TelTarih;
+        private System.Windows.Forms.Button btn_Dogalgaz;
+        private System.Windows.Forms.Button btn_Su;
+        private System.Windows.Forms.Button btn_Int;
+        private System.Windows.Forms.Button btn_Tel;
     }
 }
