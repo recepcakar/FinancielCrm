@@ -159,6 +159,7 @@
             this.btn_SignUp.TabIndex = 5;
             this.btn_SignUp.Text = "Kayıt ol";
             this.btn_SignUp.UseVisualStyleBackColor = false;
+            this.btn_SignUp.Click += new System.EventHandler(this.btn_SignUp_Click);
             // 
             // linklbl_PasswordLink
             // 
@@ -193,6 +194,7 @@
             this.Name = "FrmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmLogin";
+            this.Load += new System.EventHandler(this.FrmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

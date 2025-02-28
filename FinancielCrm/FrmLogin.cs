@@ -22,32 +22,37 @@ namespace FinancielCrm
         private void button3_Click(object sender, EventArgs e)
         {
             var Username = txt_username.Text.ToUpper();
-            var Password = txt_password.Text.ToUpper();
+            var Password = txt_password.Text;
 
-            var values = db.Users.Select(X => new
+            var user = db.Users.FirstOrDefault(x => x.UserName.ToUpper() == Username && x.Password == Password);
+
+            if (user != null)
             {
-                X.UserName,
-                X.Password
-            }).ToList();
-            foreach (var user in values) 
+                MessageBox.Show("Başarılı giriş yapıldı");
+                FrmDashBoard frmDashBoard = new FrmDashBoard(user.UserId);
+                frmDashBoard.Show();
+                this.Hide();
+            }
+            else
             {
-                if (user.UserName == Username && user.Password == Password)
-                {
-                    MessageBox.Show("başarılı giriş yapıldı");
-                    FrmDashBoard frmDashBoard = new FrmDashBoard();
-                    frmDashBoard.Show();
-                    this.Hide();
-                }
-                else
-                {
-                    MessageBox.Show("Kullanıcı veya şifre hatalı");
-                }
+                MessageBox.Show("Kullanıcı adı veya şifre hatalı");
             }
         }
 
         private void linklbl_PasswordLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             MessageBox.Show("Şuanlık kullanılamıyor");
+        }
+
+        private void FrmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_SignUp_Click(object sender, EventArgs e)
+        {
+            FrmKayit frmKayit = new FrmKayit();
+            frmKayit.Show();
         }
     }
 }

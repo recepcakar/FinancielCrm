@@ -12,45 +12,46 @@ namespace FinancielCrm
 {
     public partial class FrmBankaHareket : Form
     {
-        public FrmBankaHareket()
+        public FrmBankaHareket(int userid)
         {
             InitializeComponent();
+            this.userid = userid;
         }
 
-      
 
 
+        int userid;
         private void btn_fatura_Click(object sender, EventArgs e)
         {
-            FrmFaturalarcs frm = new FrmFaturalarcs();
+            FrmFaturalarcs frm = new FrmFaturalarcs(userid);
             frm.Show();
             this.Close();
         }
 
         private void btn_hareket_Click(object sender, EventArgs e)
         {
-            FrmBankaHareket frm = new FrmBankaHareket();
+            FrmBankaHareket frm = new FrmBankaHareket(userid);
             frm.Show();
             this.Close();
         }
 
         private void btn_category_Click_1(object sender, EventArgs e)
         {
-            FrmCategory frm = new FrmCategory();
+            FrmCategory frm = new FrmCategory(userid);
             frm.Show();
             this.Close();
         }
 
         private void btn_Banks_Click_1(object sender, EventArgs e)
         {
-            FrmBanks frm = new FrmBanks();
+            FrmBanks frm = new FrmBanks(userid);
             frm.Show();
             this.Close();
         }
 
         private void btn_BillsForm_Click_1(object sender, EventArgs e)
         {
-            FrmBilling frm = new FrmBilling();
+            FrmBilling frm = new FrmBilling(userid);
             frm.Show();
             this.Close();
         }
@@ -62,14 +63,14 @@ namespace FinancielCrm
 
         private void btn_dashboard_Click_1(object sender, EventArgs e)
         {
-            FrmDashBoard frm = new FrmDashBoard();
+            FrmDashBoard frm = new FrmDashBoard(userid);
             frm.Show();
             this.Close();
         }
 
         private void btn_settings_Click(object sender, EventArgs e)
         {
-            FrmAyarlar frm = new FrmAyarlar();
+            FrmAyarlar frm = new FrmAyarlar(userid);
             frm.Show();
             this.Close();
         }

@@ -14,7 +14,8 @@ namespace FinancielCrm
 {
     public partial class FrmFaturalarcs : Form
     {
-        public FrmFaturalarcs()
+        int userid;
+        public FrmFaturalarcs(int id)
         {
             InitializeComponent();
         }
@@ -48,14 +49,14 @@ namespace FinancielCrm
 
         private void btn_category_Click(object sender, EventArgs e)
         {
-            FrmCategory cat = new FrmCategory();
+            FrmCategory cat = new FrmCategory(userid);
             cat.Show();
             this.Close();
         }
 
         private void btn_Banks_Click(object sender, EventArgs e)
         {
-            FrmBanks banks = new FrmBanks();
+            FrmBanks banks = new FrmBanks(userid);
             banks.Show();
             this.Close();
 
@@ -68,7 +69,7 @@ namespace FinancielCrm
 
         private void btn_BillsForm_Click(object sender, EventArgs e)
         {
-            FrmBilling  billing = new FrmBilling();
+            FrmBilling  billing = new FrmBilling(userid);
                 
             billing.Show();
             this.Close();
@@ -76,21 +77,21 @@ namespace FinancielCrm
 
         private void btn_hareket_Click(object sender, EventArgs e)
         {
-            FrmBankaHareket bankaH = new FrmBankaHareket();
+            FrmBankaHareket bankaH = new FrmBankaHareket(userid);
             bankaH.Show();
             this.Close();
         }
 
         private void btn_dashboard_Click(object sender, EventArgs e)
         {
-            FrmDashBoard dashboard = new FrmDashBoard();
+            FrmDashBoard dashboard = new FrmDashBoard(userid);
             dashboard.Show();
             this.Close();
         }
 
         private void btn_settings_Click(object sender, EventArgs e)
         {
-            FrmAyarlar settings = new FrmAyarlar();
+            FrmAyarlar settings = new FrmAyarlar(userid);
             settings.Show();
                 
             this.Close();
@@ -315,7 +316,7 @@ namespace FinancielCrm
         }
         private void YenidenYukle()
         {
-            FrmFaturalarcs yeniForm = new FrmFaturalarcs();
+            FrmFaturalarcs yeniForm = new FrmFaturalarcs(userid);
             yeniForm.Show();
             this.Close(); // Eski formu kapat
         }

@@ -13,8 +13,10 @@ namespace FinancielCrm
 {
     public partial class FrmBilling : Form
     {
-        public FrmBilling()
+        int userid;
+        public FrmBilling(int id)
         {
+            userid = id;
             InitializeComponent();
         }
 
@@ -36,7 +38,7 @@ namespace FinancielCrm
 
         private void button4_Click(object sender, EventArgs e)
         {
-            FrmBanks banks = new FrmBanks();
+            FrmBanks banks = new FrmBanks(userid);
             banks.ShowDialog();
             this.Close();
 
@@ -82,7 +84,7 @@ namespace FinancielCrm
 
         private void btn_category_Click(object sender, EventArgs e)
         {
-            FrmCategory category = new FrmCategory();
+            FrmCategory category = new FrmCategory(userid);
              category.Show();
             this.Close();
 
@@ -90,14 +92,14 @@ namespace FinancielCrm
 
         private void btn_Banks_Click(object sender, EventArgs e)
         {
-            FrmBanks banks = new FrmBanks();
+            FrmBanks banks = new FrmBanks(userid);
             banks.Show();
             this.Close();
         }
 
         private void btn_fatura_Click(object sender, EventArgs e)
         {
-            FrmFaturalarcs fat=new FrmFaturalarcs();    
+            FrmFaturalarcs fat=new FrmFaturalarcs(userid);    
             fat.Show();
             this.Close();
         }
@@ -109,21 +111,21 @@ namespace FinancielCrm
 
         private void btn_hareket_Click(object sender, EventArgs e)
         {
-            FrmBankaHareket bank = new FrmBankaHareket();
+            FrmBankaHareket bank = new FrmBankaHareket(userid);
             bank.Show();
             this.Close();
         }
 
         private void btn_dashboard_Click(object sender, EventArgs e)
         {
-            FrmDashBoard dashboard = new FrmDashBoard();
+            FrmDashBoard dashboard = new FrmDashBoard(userid);
             dashboard.Show();
             this.Close();
         }
 
         private void btn_settings_Click(object sender, EventArgs e)
         {
-            FrmAyarlar settings = new FrmAyarlar();
+            FrmAyarlar settings = new FrmAyarlar(userid);
             settings.Show();
             this.Close();
 

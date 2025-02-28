@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinancielCrm.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,8 +13,10 @@ namespace FinancielCrm
 {
     public partial class FrmCategory : Form
     {
-        public FrmCategory()
+        int userid;
+        public FrmCategory(int id)
         {
+            userid = id;
             InitializeComponent();
         }
 
@@ -22,42 +25,42 @@ namespace FinancielCrm
         private void btn_Banks_Click(object sender, EventArgs e)
         {
 
-            FrmBanks frm = new FrmBanks();
+            FrmBanks frm = new FrmBanks(userid);
             frm.Show();
             this.Close();
         }
 
         private void btn_fatura_Click(object sender, EventArgs e)
         {
-            FrmFaturalarcs frm = new FrmFaturalarcs();
+            FrmFaturalarcs frm = new FrmFaturalarcs(userid);
             frm.Show();
             this.Close();
         }
 
         private void btn_BillsForm_Click(object sender, EventArgs e)
         {
-            FrmBilling frm = new FrmBilling();
+            FrmBilling frm = new FrmBilling(userid);
             frm.Show();
             this.Close();
         }
 
         private void btn_hareket_Click(object sender, EventArgs e)
         {
-            FrmBankaHareket frm = new FrmBankaHareket();
+            FrmBankaHareket frm = new FrmBankaHareket(userid);
             frm.Show();
             this.Close();
         }
 
         private void btn_dashboard_Click(object sender, EventArgs e)
         {
-            FrmDashBoard frm = new FrmDashBoard();
+            FrmDashBoard frm = new FrmDashBoard(userid);
             frm.Show();
             this.Close();
         }
 
         private void btn_settings_Click(object sender, EventArgs e)
         {
-            FrmAyarlar frm = new FrmAyarlar();
+            FrmAyarlar frm = new FrmAyarlar(userid);
             frm.Show();
             this.Close();
         }
@@ -73,6 +76,11 @@ namespace FinancielCrm
                 frm.Show();
                 this.Close();
             }
+        }
+
+        private void FrmCategory_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

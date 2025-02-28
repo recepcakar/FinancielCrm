@@ -14,8 +14,10 @@ namespace FinancielCrm
 {
     public partial class FrmBanks : Form
     {
-        public FrmBanks()
+        int userid;
+        public FrmBanks(int id)
         {
+            userid = id;
             InitializeComponent();
         }
         FinancielCrmDb1Entities db=new FinancielCrmDb1Entities();
@@ -47,37 +49,37 @@ namespace FinancielCrm
 
         private void btn_category_Click(object sender, EventArgs e)
         {
-            FrmCategory frm = new FrmCategory();
+            FrmCategory frm = new FrmCategory(userid);
             frm.Show();
             this.Close();
         }
 
         private void btn_fatura_Click(object sender, EventArgs e)
-        { FrmFaturalarcs frm = new FrmFaturalarcs();
+        { FrmFaturalarcs frm = new FrmFaturalarcs(userid);
             frm.Show();
             this.Close();
         }
 
         private void btn_BillsForm_Click(object sender, EventArgs e)
-        {  FrmBilling frm = new FrmBilling();
+        {  FrmBilling frm = new FrmBilling(userid);
             frm.Show();
             this.Close();
         }
 
         private void btn_hareket_Click(object sender, EventArgs e)
-        { FrmBankaHareket frm = new FrmBankaHareket();
+        { FrmBankaHareket frm = new FrmBankaHareket(userid);
             frm.Show();
             this.Close();
         }
 
         private void btn_dashboard_Click(object sender, EventArgs e)
-        { FrmDashBoard frm = new FrmDashBoard();
+        { FrmDashBoard frm = new FrmDashBoard(userid);
             frm.Show();
             this.Close();
         }
 
         private void btn_settings_Click(object sender, EventArgs e)
-        { FrmAyarlar frm = new FrmAyarlar();
+        { FrmAyarlar frm = new FrmAyarlar(userid);
             frm.Show();
             this.Close();
         }

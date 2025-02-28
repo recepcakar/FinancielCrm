@@ -192,6 +192,7 @@
             this.Name = "FrmCategory";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmCategory";
+            this.Load += new System.EventHandler(this.FrmCategory_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

@@ -14,8 +14,11 @@ namespace FinancielCrm
 {
     public partial class FrmDashBoard : Form
     {
-        public FrmDashBoard()
+
+        int userid;
+        public FrmDashBoard(int id)
         {
+            userid= id; 
             InitializeComponent();
         }
         FinancielCrmDb1Entities db=new FinancielCrmDb1Entities();
@@ -71,7 +74,7 @@ namespace FinancielCrm
 
         private void button4_Click(object sender, EventArgs e)
         {
-            FrmBanks frmBanks = new FrmBanks();
+            FrmBanks frmBanks = new FrmBanks(userid);
             frmBanks.Show();
             this.Hide();
         }
@@ -84,61 +87,89 @@ namespace FinancielCrm
             {
                 var values=db.Bills.Where(x=>x.BillTitle== "Elektrik").Select(x=>x.BillAmount).FirstOrDefault();
                 lbl_fatura.Text = "Elektrik faturası";
-                lbl_BillAmount.Text = values.ToString()+" ₺";
+                if (values == null)
+                {
+                    lbl_BillAmount.Text = "0,00 ₺";
+                } 
+                else
+                {
+                    lbl_BillAmount.Text = values.ToString() + " ₺";
+                } 
             }
             else if (count % 4 == 1)
             {
                 var values = db.Bills.Where(x => x.BillTitle == "Doğalgaz").Select(x => x.BillAmount).FirstOrDefault();
                 lbl_fatura.Text = "Doğalgaz faturası";
-                lbl_BillAmount.Text = values.ToString() + " ₺";
+                if (values == null)
+                {
+                    lbl_BillAmount.Text = "0,00 ₺";
+                }
+                else
+                {
+                    lbl_BillAmount.Text = values.ToString() + " ₺";
+                }
 
             }
             else if(count % 4 == 2) 
             {
                 var values = db.Bills.Where(x => x.BillTitle == "Su").Select(x => x.BillAmount).FirstOrDefault();
                 lbl_fatura.Text = "Su faturası";
-                lbl_BillAmount.Text = values.ToString() + " ₺";
+                if (values == null)
+                {
+                    lbl_BillAmount.Text = "0,00 ₺";
+                }
+                else
+                {
+                    lbl_BillAmount.Text = values.ToString() + " ₺";
+                }
             }
             else if (count % 4 == 3)
             {
                 var values = db.Bills.Where(x => x.BillTitle == "İnternet").Select(x => x.BillAmount).FirstOrDefault();
                 lbl_fatura.Text = "İnternet faturası";
-                lbl_BillAmount.Text = values.ToString() + " ₺";
+                if (values == null)
+                {
+                    lbl_BillAmount.Text = "0,00 ₺";
+                }
+                else
+                {
+                    lbl_BillAmount.Text = values.ToString() + " ₺";
+                }
 
             }
         }
 
         private void btn_BillsForm_Click(object sender, EventArgs e)
         {
-            FrmBilling frmBilling = new FrmBilling();
+            FrmBilling frmBilling = new FrmBilling(userid);
             frmBilling.Show();
             this.Close();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            FrmCategory frmCategory = new FrmCategory();
+            FrmCategory frmCategory = new FrmCategory(userid);
             frmCategory.Show();
             this.Close();
         }
 
         private void btn_fatura_Click(object sender, EventArgs e)
         {
-            FrmFaturalarcs frm = new FrmFaturalarcs();
+            FrmFaturalarcs frm = new FrmFaturalarcs(userid);
             frm.Show();
             this.Close();
         }
 
         private void btn_hareket_Click(object sender, EventArgs e)
         {
-            FrmBankaHareket frmBank=new FrmBankaHareket();
+            FrmBankaHareket frmBank=new FrmBankaHareket(userid);
             frmBank.Show();
             this.Close();
         }
 
         private void btn_settings_Click(object sender, EventArgs e)
         {
-            FrmAyarlar frm = new FrmAyarlar();
+            FrmAyarlar frm = new FrmAyarlar(userid);
             frm.Show();
             this.Close();
         }
