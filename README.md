@@ -23,3 +23,6 @@ ve ek olarak veri tabanındaki fatura türlerine ait ilk eklenen verileri çekiy
 ![Screenshot 2025-02-28 114333](https://github.com/user-attachments/assets/5b320d38-3e4b-418c-9155-3c605ae24ad7)
 ![Screenshot 2025-02-28 114353](https://github.com/user-attachments/assets/06a14d00-bbf2-4480-8ab4-cc785d073cb7)
 *******************************************************************************************************************************
+fatura ekleme işlemini yapmamıştım yapınca daha iyi olcağını düşündüm faturalar formunu düzenledim.
+![image](https://github.com/user-attachments/assets/3fefc506-55bc-4546-a943-7f1c833fc97e)
+
