@@ -319,5 +319,22 @@ namespace FinancielCrm
             yeniForm.Show();
             this.Close(); // Eski formu kapat
         }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Bill bill = new Bill();
+            bill.BillTitle=comboBox1.Text;
+            bill.BillAmount=numericUpDown1.Value;
+            bill.BillPeriod=txt_Date.Text;
+
+            db.Bills.Add(bill);
+            db.SaveChanges();
+            YenidenYukle();
+        }
     }
 }
