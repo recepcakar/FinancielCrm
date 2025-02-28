@@ -25,4 +25,6 @@ ve ek olarak veri tabanındaki fatura türlerine ait ilk eklenen verileri çekiy
 *******************************************************************************************************************************
 fatura ekleme işlemini yapmamıştım yapınca daha iyi olcağını düşündüm faturalar formunu düzenledim.
 ![image](https://github.com/user-attachments/assets/3fefc506-55bc-4546-a943-7f1c833fc97e)
-
+*******************************************************************************************************************************
+Ayarlar formunu tamamladım ve formlar arası girdiğimiz userin id'sini döndürdüm.
+![image](https://github.com/user-attachments/assets/1748b5c0-f692-419a-ad1e-1344bb60a26c)
