@@ -19,6 +19,7 @@ Login Sayfamı oluşturdum kullanıcı adı harf boyutuna duyarlı yapmadım .ar
 ![Screenshot 2025-02-27 161357](https://github.com/user-attachments/assets/9798cdf5-3a88-43bb-a391-b2dbb58939fc)
 *******************************************************************************************************************************
 bu bölümde faturalar kısmını tamamladım çoğu görebildiğim hataları giderdim örnek olarak ödendikten sonra sayfa yenilemesi , veri yoksa buton aktifsizleştirme ,veri bulamazsa hata almaması ve kod kalabalığını azaltmak için de bazı aynı işlevli yerler için fonksiyonlar ekledim.
+ve ek olarak veri tabanındaki fatura türlerine ait ilk eklenen verileri çekiyorum. 
 ![Screenshot 2025-02-28 114333](https://github.com/user-attachments/assets/5b320d38-3e4b-418c-9155-3c605ae24ad7)
 ![Screenshot 2025-02-28 114353](https://github.com/user-attachments/assets/06a14d00-bbf2-4480-8ab4-cc785d073cb7)
 *******************************************************************************************************************************
