@@ -20,11 +20,16 @@ Login Sayfamı oluşturdum kullanıcı adı harf boyutuna duyarlı yapmadım .ar
 *******************************************************************************************************************************
 bu bölümde faturalar kısmını tamamladım çoğu görebildiğim hataları giderdim örnek olarak ödendikten sonra sayfa yenilemesi , veri yoksa buton aktifsizleştirme ,veri bulamazsa hata almaması ve kod kalabalığını azaltmak için de bazı aynı işlevli yerler için fonksiyonlar ekledim.
 ve ek olarak veri tabanındaki fatura türlerine ait ilk eklenen verileri çekiyorum. 
-![Screenshot 2025-02-28 114333](https://github.com/user-attachments/assets/5b320d38-3e4b-418c-9155-3c605ae24ad7)
-![Screenshot 2025-02-28 114353](https://github.com/user-attachments/assets/06a14d00-bbf2-4480-8ab4-cc785d073cb7)
+[GÖRÜNÜŞÜ YENİLEDİĞİM İÇİN FAZLA KALABALIK OLMAMASINDAN DOLAYI ALTA KOYDUM].
 *******************************************************************************************************************************
 fatura ekleme işlemini yapmamıştım yapınca daha iyi olcağını düşündüm faturalar formunu düzenledim.
-![image](https://github.com/user-attachments/assets/3fefc506-55bc-4546-a943-7f1c833fc97e)
+[GÖRÜNÜŞÜ YENİLEDİĞİM İÇİN FAZLA KALABALIK OLMAMASINDAN DOLAYI ALTA KOYDUM].
 *******************************************************************************************************************************
 Ayarlar formunu tamamladım ve formlar arası girdiğimiz userin id'sini döndürdüm.
 ![image](https://github.com/user-attachments/assets/1748b5c0-f692-419a-ad1e-1344bb60a26c)
+*******************************************************************************************************************************
+Görünüşünü yenilediğim faturalar kısmı;  şuana kadar ekledğim menü panelinin ayarlar hariç hepsini sol tarafa aldım.
+![Screenshot 2025-03-01 131401](https://github.com/user-attachments/assets/1e7ac39f-f3c8-4a05-a1a4-2442a08e710a)
+*******************************************************************************************************************************
+Giderler formunu tamamı ile değiştirdim ve baştan yazdım böyle daha güzel olduğunu düşündüm. sol alttaki panel 2sn'de bir yenileniyor, en çok ve en az gösteriliyor. 
+![Screenshot 2025-03-01 131405](https://github.com/user-attachments/assets/68ccc583-9def-4ea1-a27f-a479b57d518c)
