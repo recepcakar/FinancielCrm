@@ -34,3 +34,10 @@ Görünüşünü yenilediğim faturalar kısmı;  şuana kadar ekledğim menü p
 *******************************************************************************************************************************
 Giderler formunu tamamı ile değiştirdim ve baştan yazdım böyle daha güzel olduğunu düşündüm. sol alttaki panel 2sn'de bir yenileniyor, en çok ve en az gösteriliyor. 
 ![Screenshot 2025-03-01 131405](https://github.com/user-attachments/assets/68ccc583-9def-4ea1-a27f-a479b57d518c)
+*******************************************************************************************************************************
+Projemi tamamladım son 2 form ektedir.
+![Screenshot 2025-03-02 011041](https://github.com/user-attachments/assets/88aeec72-0331-46c8-81e5-7c3638939c24)
+![Screenshot 2025-03-02 005754](https://github.com/user-attachments/assets/79b7a861-edc9-479d-acbc-45a0da8ca374)
+![Screenshot 2025-03-02 005748](https://github.com/user-attachments/assets/9718003e-00ce-4e74-a869-97da97f5594e)
+![Screenshot 2025-03-02 005741](https://github.com/user-attachments/assets/f789d457-4a25-4efd-8ce3-b13d3d0e536b)
+*******************************************************************************************************************************
