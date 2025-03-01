@@ -70,7 +70,7 @@
             this.panel1.Controls.Add(this.btn_fatura);
             this.panel1.Location = new System.Drawing.Point(0, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(884, 122);
+            this.panel1.Size = new System.Drawing.Size(179, 485);
             this.panel1.TabIndex = 1;
             // 
             // btn_dashboard
@@ -81,7 +81,7 @@
             this.btn_dashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_dashboard.Font = new System.Drawing.Font("Calibri", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_dashboard.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_dashboard.Location = new System.Drawing.Point(237, 69);
+            this.btn_dashboard.Location = new System.Drawing.Point(3, 277);
             this.btn_dashboard.Name = "btn_dashboard";
             this.btn_dashboard.Size = new System.Drawing.Size(159, 45);
             this.btn_dashboard.TabIndex = 1;
@@ -97,9 +97,9 @@
             this.btn_Banks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Banks.Font = new System.Drawing.Font("Calibri", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_Banks.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_Banks.Location = new System.Drawing.Point(237, 3);
+            this.btn_Banks.Location = new System.Drawing.Point(0, 73);
             this.btn_Banks.Name = "btn_Banks";
-            this.btn_Banks.Size = new System.Drawing.Size(159, 45);
+            this.btn_Banks.Size = new System.Drawing.Size(162, 45);
             this.btn_Banks.TabIndex = 2;
             this.btn_Banks.Text = "Bankalar";
             this.btn_Banks.UseVisualStyleBackColor = false;
@@ -113,7 +113,7 @@
             this.btn_BillsForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_BillsForm.Font = new System.Drawing.Font("Calibri", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_BillsForm.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_BillsForm.Location = new System.Drawing.Point(682, 3);
+            this.btn_BillsForm.Location = new System.Drawing.Point(3, 175);
             this.btn_BillsForm.Name = "btn_BillsForm";
             this.btn_BillsForm.Size = new System.Drawing.Size(159, 45);
             this.btn_BillsForm.TabIndex = 3;
@@ -129,9 +129,9 @@
             this.btn_hareket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_hareket.Font = new System.Drawing.Font("Calibri", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_hareket.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_hareket.Location = new System.Drawing.Point(12, 69);
+            this.btn_hareket.Location = new System.Drawing.Point(3, 226);
             this.btn_hareket.Name = "btn_hareket";
-            this.btn_hareket.Size = new System.Drawing.Size(182, 45);
+            this.btn_hareket.Size = new System.Drawing.Size(159, 45);
             this.btn_hareket.TabIndex = 4;
             this.btn_hareket.Text = "Banka Hareketleri";
             this.btn_hareket.UseVisualStyleBackColor = false;
@@ -145,7 +145,7 @@
             this.btn_LogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_LogOut.Font = new System.Drawing.Font("Calibri", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_LogOut.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_LogOut.Location = new System.Drawing.Point(682, 69);
+            this.btn_LogOut.Location = new System.Drawing.Point(0, 379);
             this.btn_LogOut.Name = "btn_LogOut";
             this.btn_LogOut.Size = new System.Drawing.Size(159, 45);
             this.btn_LogOut.TabIndex = 5;
@@ -161,7 +161,7 @@
             this.btn_settings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_settings.Font = new System.Drawing.Font("Calibri", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_settings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_settings.Location = new System.Drawing.Point(455, 69);
+            this.btn_settings.Location = new System.Drawing.Point(3, 328);
             this.btn_settings.Name = "btn_settings";
             this.btn_settings.Size = new System.Drawing.Size(159, 45);
             this.btn_settings.TabIndex = 6;
@@ -177,9 +177,9 @@
             this.btn_category.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_category.Font = new System.Drawing.Font("Calibri", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_category.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_category.Location = new System.Drawing.Point(12, 3);
+            this.btn_category.Location = new System.Drawing.Point(0, 22);
             this.btn_category.Name = "btn_category";
-            this.btn_category.Size = new System.Drawing.Size(182, 45);
+            this.btn_category.Size = new System.Drawing.Size(162, 45);
             this.btn_category.TabIndex = 7;
             this.btn_category.Text = "Kategoriler";
             this.btn_category.UseVisualStyleBackColor = false;
@@ -193,7 +193,7 @@
             this.btn_fatura.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_fatura.Font = new System.Drawing.Font("Calibri", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_fatura.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_fatura.Location = new System.Drawing.Point(455, 3);
+            this.btn_fatura.Location = new System.Drawing.Point(3, 124);
             this.btn_fatura.Name = "btn_fatura";
             this.btn_fatura.Size = new System.Drawing.Size(159, 45);
             this.btn_fatura.TabIndex = 8;
@@ -244,7 +244,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label2.Location = new System.Drawing.Point(426, 198);
+            this.label2.Location = new System.Drawing.Point(351, 271);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(199, 20);
             this.label2.TabIndex = 4;
@@ -267,7 +267,7 @@
             this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button3.FlatAppearance.BorderSize = 3;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(507, 49);
+            this.button3.Location = new System.Drawing.Point(496, 61);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(107, 31);
             this.button3.TabIndex = 3;
@@ -281,7 +281,7 @@
             this.button4.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button4.FlatAppearance.BorderSize = 3;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(507, 143);
+            this.button4.Location = new System.Drawing.Point(496, 155);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(107, 31);
             this.button4.TabIndex = 3;
@@ -294,22 +294,22 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label4.Location = new System.Drawing.Point(426, 114);
+            this.label4.Location = new System.Drawing.Point(415, 112);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(379, 20);
+            this.label4.Size = new System.Drawing.Size(212, 40);
             this.label4.TabIndex = 4;
-            this.label4.Text = "Kategoriler menüsünün arka plan rengini mavi yapar.";
+            this.label4.Text = "Kategoriler menüsünün arka \r\nplan rengini mavi yapar.";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label5.Location = new System.Drawing.Point(425, 22);
+            this.label5.Location = new System.Drawing.Point(428, 18);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(364, 20);
+            this.label5.Size = new System.Drawing.Size(199, 40);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Katagoriler menüsünün arka plan rengini gri yapar.";
+            this.label5.Text = "Katagoriler menüsünün\r\n arka plan rengini gri yapar.";
             // 
             // button5
             // 
@@ -317,7 +317,7 @@
             this.button5.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button5.FlatAppearance.BorderSize = 3;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(278, 192);
+            this.button5.Location = new System.Drawing.Point(203, 265);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(141, 31);
             this.button5.TabIndex = 3;
@@ -342,7 +342,7 @@
             this.button6.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button6.FlatAppearance.BorderSize = 3;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Location = new System.Drawing.Point(278, 238);
+            this.button6.Location = new System.Drawing.Point(203, 311);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(141, 31);
             this.button6.TabIndex = 3;
@@ -355,7 +355,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label7.Location = new System.Drawing.Point(425, 244);
+            this.label7.Location = new System.Drawing.Point(350, 317);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(189, 20);
             this.label7.TabIndex = 4;
@@ -367,7 +367,7 @@
             this.button7.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button7.FlatAppearance.BorderSize = 3;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Location = new System.Drawing.Point(278, 288);
+            this.button7.Location = new System.Drawing.Point(203, 361);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(141, 31);
             this.button7.TabIndex = 3;
@@ -380,7 +380,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label8.Location = new System.Drawing.Point(425, 294);
+            this.label8.Location = new System.Drawing.Point(350, 367);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(140, 20);
             this.label8.TabIndex = 4;
@@ -404,10 +404,11 @@
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.label1);
             this.panel2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel2.Location = new System.Drawing.Point(0, 121);
+            this.panel2.Location = new System.Drawing.Point(168, 1);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(911, 363);
+            this.panel2.Size = new System.Drawing.Size(928, 495);
             this.panel2.TabIndex = 5;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // FrmAyarlar
             // 
