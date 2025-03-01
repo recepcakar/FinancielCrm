@@ -156,16 +156,16 @@
             // btn_settings
             // 
             this.btn_settings.BackColor = System.Drawing.Color.Transparent;
-            this.btn_settings.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_settings.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn_settings.FlatAppearance.BorderSize = 3;
             this.btn_settings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_settings.Font = new System.Drawing.Font("Calibri", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btn_settings.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_settings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn_settings.Location = new System.Drawing.Point(455, 69);
             this.btn_settings.Name = "btn_settings";
             this.btn_settings.Size = new System.Drawing.Size(159, 45);
             this.btn_settings.TabIndex = 6;
-            this.btn_settings.Text = "Buradasınız.";
+            this.btn_settings.Text = "Ayarlar";
             this.btn_settings.UseVisualStyleBackColor = false;
             this.btn_settings.Click += new System.EventHandler(this.btn_settings_Click);
             // 

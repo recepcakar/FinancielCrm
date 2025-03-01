@@ -106,16 +106,16 @@
             // btn_Banks
             // 
             this.btn_Banks.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Banks.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_Banks.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn_Banks.FlatAppearance.BorderSize = 3;
             this.btn_Banks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Banks.Font = new System.Drawing.Font("Calibri", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btn_Banks.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_Banks.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn_Banks.Location = new System.Drawing.Point(14, 67);
             this.btn_Banks.Name = "btn_Banks";
             this.btn_Banks.Size = new System.Drawing.Size(159, 45);
             this.btn_Banks.TabIndex = 2;
-            this.btn_Banks.Text = "Buradasınız.";
+            this.btn_Banks.Text = "Bankalar";
             this.btn_Banks.UseVisualStyleBackColor = false;
             // 
             // btn_BillsForm

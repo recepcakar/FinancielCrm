@@ -136,16 +136,16 @@
             // btn_dashboard
             // 
             this.btn_dashboard.BackColor = System.Drawing.Color.Transparent;
-            this.btn_dashboard.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_dashboard.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn_dashboard.FlatAppearance.BorderSize = 3;
             this.btn_dashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_dashboard.Font = new System.Drawing.Font("Calibri", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btn_dashboard.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_dashboard.Location = new System.Drawing.Point(16, 267);
+            this.btn_dashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_dashboard.Location = new System.Drawing.Point(17, 267);
             this.btn_dashboard.Name = "btn_dashboard";
             this.btn_dashboard.Size = new System.Drawing.Size(159, 45);
             this.btn_dashboard.TabIndex = 0;
-            this.btn_dashboard.Text = "Buradasınız.";
+            this.btn_dashboard.Text = "Dashboard";
             this.btn_dashboard.UseVisualStyleBackColor = false;
             this.btn_dashboard.Click += new System.EventHandler(this.btn_dashboard_Click);
             // 
