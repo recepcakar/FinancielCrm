@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinancielCrm.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -86,6 +87,35 @@ namespace FinancielCrm
                 frm.Show();
                 this.Close();
             }
+        }
+        FinancielCrmDb1Entities db=new FinancielCrmDb1Entities();
+        private void btn_ziraat_Click(object sender, EventArgs e)
+        {
+            datagrid(1);
+            label4.Text = "Ziraat Bankası";
+        }
+
+        private void btn_is_Click(object sender, EventArgs e)
+        {
+            datagrid(2);
+            label4.Text = "İş Bankası";
+        }
+
+        private void btn_vakıf_Click(object sender, EventArgs e)
+        {
+            datagrid(3);
+            label4.Text = "Vakıf Bankası";
+        }
+        public void datagrid(int id)
+        {
+            var value = db.BankProccesses.Where(x => x.BankId == id).Select(y => new
+            {
+                y.ProccessDate,
+                y.BankDescription,
+                y.ProccessType,
+                y.Amount,
+            }).ToList();
+            dataGridView1.DataSource = value;
         }
     }
 }

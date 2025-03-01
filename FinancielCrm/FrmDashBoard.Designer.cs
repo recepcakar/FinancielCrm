@@ -298,9 +298,9 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(21, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(121, 24);
+            this.label1.Size = new System.Drawing.Size(161, 24);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Banka Formu";
+            this.label1.Text = "Dashboard Formu";
             // 
             // label2
             // 

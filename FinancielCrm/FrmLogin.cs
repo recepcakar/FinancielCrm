@@ -29,8 +29,8 @@ namespace FinancielCrm
             if (user != null)
             {
                 MessageBox.Show("Başarılı giriş yapıldı");
-                FrmDashBoard frmDashBoard = new FrmDashBoard(user.UserId);
-                frmDashBoard.Show();
+                FrmCategory frmCategory = new FrmCategory(user.UserId);
+                frmCategory.Show();
                 this.Hide();
             }
             else

@@ -132,6 +132,7 @@ namespace FinancielCrm
             }
             else
             {
+                btn_Elektrik.Text = "Ödendi";
                 btn_Elektrik.Enabled = false;
             }
 
@@ -151,6 +152,7 @@ namespace FinancielCrm
             }
             else
             {
+                btn_Dogalgaz.Text = "Ödendi";
                 btn_Dogalgaz.Enabled = false;
             }
 
@@ -170,7 +172,7 @@ namespace FinancielCrm
                 btn_Su.Enabled=true;
             }
             else
-            {
+            {btn_Su.Text = "Ödendi";
                 btn_Su.Enabled = false;
             }
             //int
@@ -192,6 +194,7 @@ namespace FinancielCrm
             }
             else
             {
+                btn_Int.Text = "Ödendi";
                 btn_Int.Enabled = false;
             }
             //tel
@@ -210,6 +213,7 @@ namespace FinancielCrm
             }
             else
             {
+                btn_Tel.Text = "Ödendi";
                btn_Tel.Enabled = false;
             }
         }

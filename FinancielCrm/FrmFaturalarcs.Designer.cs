@@ -252,11 +252,11 @@
             // 
             this.btn_Elektrik.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_Elektrik.ForeColor = System.Drawing.Color.DarkGreen;
-            this.btn_Elektrik.Location = new System.Drawing.Point(480, 15);
+            this.btn_Elektrik.Location = new System.Drawing.Point(457, 15);
             this.btn_Elektrik.Name = "btn_Elektrik";
-            this.btn_Elektrik.Size = new System.Drawing.Size(182, 37);
+            this.btn_Elektrik.Size = new System.Drawing.Size(205, 37);
             this.btn_Elektrik.TabIndex = 2;
-            this.btn_Elektrik.Text = "Ödendi";
+            this.btn_Elektrik.Text = "Ödemek için tıkla";
             this.btn_Elektrik.UseVisualStyleBackColor = true;
             this.btn_Elektrik.Click += new System.EventHandler(this.btn_Elektrik_Click);
             // 
@@ -309,11 +309,11 @@
             // 
             this.btn_Dogalgaz.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_Dogalgaz.ForeColor = System.Drawing.Color.DarkGreen;
-            this.btn_Dogalgaz.Location = new System.Drawing.Point(480, 15);
+            this.btn_Dogalgaz.Location = new System.Drawing.Point(457, 15);
             this.btn_Dogalgaz.Name = "btn_Dogalgaz";
-            this.btn_Dogalgaz.Size = new System.Drawing.Size(182, 37);
+            this.btn_Dogalgaz.Size = new System.Drawing.Size(205, 37);
             this.btn_Dogalgaz.TabIndex = 2;
-            this.btn_Dogalgaz.Text = "Ödendi";
+            this.btn_Dogalgaz.Text = "Ödemek için tıkla";
             this.btn_Dogalgaz.UseVisualStyleBackColor = true;
             this.btn_Dogalgaz.Click += new System.EventHandler(this.btn_Dogalgaz_Click);
             // 
@@ -378,11 +378,11 @@
             // 
             this.btn_Su.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_Su.ForeColor = System.Drawing.Color.DarkGreen;
-            this.btn_Su.Location = new System.Drawing.Point(480, 14);
+            this.btn_Su.Location = new System.Drawing.Point(457, 14);
             this.btn_Su.Name = "btn_Su";
-            this.btn_Su.Size = new System.Drawing.Size(182, 37);
+            this.btn_Su.Size = new System.Drawing.Size(205, 37);
             this.btn_Su.TabIndex = 2;
-            this.btn_Su.Text = "Ödendi";
+            this.btn_Su.Text = "Ödemek için tıkla";
             this.btn_Su.UseVisualStyleBackColor = true;
             this.btn_Su.Click += new System.EventHandler(this.btn_Su_Click);
             // 
@@ -447,11 +447,11 @@
             // 
             this.btn_Int.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_Int.ForeColor = System.Drawing.Color.DarkGreen;
-            this.btn_Int.Location = new System.Drawing.Point(480, 14);
+            this.btn_Int.Location = new System.Drawing.Point(457, 14);
             this.btn_Int.Name = "btn_Int";
-            this.btn_Int.Size = new System.Drawing.Size(182, 37);
+            this.btn_Int.Size = new System.Drawing.Size(205, 37);
             this.btn_Int.TabIndex = 2;
-            this.btn_Int.Text = "Ödendi";
+            this.btn_Int.Text = "Ödemek için tıkla";
             this.btn_Int.UseVisualStyleBackColor = true;
             this.btn_Int.Click += new System.EventHandler(this.btn_Int_Click);
             // 
@@ -503,11 +503,11 @@
             // 
             this.btn_Tel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_Tel.ForeColor = System.Drawing.Color.DarkGreen;
-            this.btn_Tel.Location = new System.Drawing.Point(480, 11);
+            this.btn_Tel.Location = new System.Drawing.Point(457, 11);
             this.btn_Tel.Name = "btn_Tel";
-            this.btn_Tel.Size = new System.Drawing.Size(182, 37);
+            this.btn_Tel.Size = new System.Drawing.Size(205, 37);
             this.btn_Tel.TabIndex = 2;
-            this.btn_Tel.Text = "Ödendi";
+            this.btn_Tel.Text = "Ödemek için tıkla";
             this.btn_Tel.UseVisualStyleBackColor = true;
             this.btn_Tel.Click += new System.EventHandler(this.btn_Tel_Click);
             // 
