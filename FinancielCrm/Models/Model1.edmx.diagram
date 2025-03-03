@@ -14,6 +14,7 @@
         <EntityTypeShape EntityType="FinancielCrmDb1Model.User" Width="1.5" PointX="5.75" PointY="6.75" IsExpanded="true" />
         <AssociationConnector Association="FinancielCrmDb1Model.FK_BankProccesses_Banks" ManuallyRouted="false" />
         <AssociationConnector Association="FinancielCrmDb1Model.FK_Spendings_Categories" ManuallyRouted="false" />
+        <AssociationConnector Association="FinancielCrmDb1Model.FK_Bills_Categories" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

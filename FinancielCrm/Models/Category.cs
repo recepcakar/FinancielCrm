@@ -18,6 +18,7 @@ namespace FinancielCrm.Models
         public Category()
         {
             this.Spendings = new HashSet<Spending>();
+            this.Bills = new HashSet<Bill>();
         }
     
         public int CategoryId { get; set; }
@@ -25,5 +26,7 @@ namespace FinancielCrm.Models
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Spending> Spendings { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Bill> Bills { get; set; }
     }
 }

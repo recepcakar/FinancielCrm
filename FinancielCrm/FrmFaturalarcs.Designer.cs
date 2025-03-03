@@ -537,7 +537,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(10, 11);
+            this.label6.Location = new System.Drawing.Point(10, 13);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(94, 24);
             this.label6.TabIndex = 9;
@@ -547,7 +547,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label8.Location = new System.Drawing.Point(419, 9);
+            this.label8.Location = new System.Drawing.Point(460, 11);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(56, 24);
             this.label8.TabIndex = 9;
@@ -574,28 +574,28 @@
             "Su",
             "İnternet",
             "Telefon"});
-            this.comboBox1.Location = new System.Drawing.Point(11, 38);
+            this.comboBox1.Location = new System.Drawing.Point(14, 38);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(180, 24);
+            this.comboBox1.Size = new System.Drawing.Size(163, 24);
             this.comboBox1.TabIndex = 6;
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(220, 40);
+            this.numericUpDown1.Location = new System.Drawing.Point(245, 39);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             100000,
             0,
             0,
             0});
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(180, 22);
+            this.numericUpDown1.Size = new System.Drawing.Size(164, 22);
             this.numericUpDown1.TabIndex = 7;
             // 
             // txt_Date
             // 
-            this.txt_Date.Location = new System.Drawing.Point(420, 36);
+            this.txt_Date.Location = new System.Drawing.Point(464, 38);
             this.txt_Date.Name = "txt_Date";
-            this.txt_Date.Size = new System.Drawing.Size(180, 22);
+            this.txt_Date.Size = new System.Drawing.Size(150, 22);
             this.txt_Date.TabIndex = 8;
             // 
             // panel7
@@ -620,7 +620,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label9.Location = new System.Drawing.Point(216, 9);
+            this.label9.Location = new System.Drawing.Point(241, 13);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(86, 24);
             this.label9.TabIndex = 9;

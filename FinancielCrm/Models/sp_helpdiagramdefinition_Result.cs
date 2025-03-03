@@ -10,16 +10,10 @@
 namespace FinancielCrm.Models
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class Bill
+    public partial class sp_helpdiagramdefinition_Result
     {
-        public int BillId { get; set; }
-        public string BillTitle { get; set; }
-        public Nullable<decimal> BillAmount { get; set; }
-        public string BillPeriod { get; set; }
-        public int CategoryId { get; set; }
-    
-        public virtual Category Category { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

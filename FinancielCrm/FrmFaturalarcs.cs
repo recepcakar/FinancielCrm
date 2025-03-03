@@ -336,7 +336,7 @@ namespace FinancielCrm
             bill.BillTitle=comboBox1.Text;
             bill.BillAmount=numericUpDown1.Value;
             bill.BillPeriod=txt_Date.Text;
-
+            bill.CategoryId = 1;
             db.Bills.Add(bill);
             db.SaveChanges();
             YenidenYukle();
