@@ -1,4 +1,4 @@
-﻿using FinancielCrm.Models;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,7 +20,7 @@ namespace FinancielCrm
             userid = id;
             InitializeComponent();
         }
-        FinancielCrmDb1Entities db=new FinancielCrmDb1Entities();
+       FinancielCrmDb1Entities1 db =new FinancielCrmDb1Entities1 ();
         private void FrmBanks_Load(object sender, EventArgs e)
         {
             var ZiraatBalance = db.Banks.Where(x => x.BankTitle == "Ziraat").Select(y => y.BankBalance).FirstOrDefault();

@@ -7,16 +7,20 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace FinancielCrm.Models
+namespace FinancielCrm
 {
     using System;
+    using System.Collections.Generic;
     
-    public partial class sp_helpdiagrams_Result
+    public partial class BankProccess
     {
-        public string Database { get; set; }
-        public string Name { get; set; }
-        public int ID { get; set; }
-        public string Owner { get; set; }
-        public int OwnerID { get; set; }
+        public int BankProccessId { get; set; }
+        public string BankDescription { get; set; }
+        public Nullable<System.DateTime> ProccessDate { get; set; }
+        public string ProccessType { get; set; }
+        public Nullable<decimal> Amount { get; set; }
+        public int BankId { get; set; }
+    
+        public virtual Bank Bank { get; set; }
     }
 }

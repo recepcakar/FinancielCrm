@@ -1,4 +1,4 @@
-﻿using FinancielCrm.Models;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,7 +13,7 @@ namespace FinancielCrm
 {
     public partial class FrmChangePassword : Form
     {
-        FinancielCrmDb1Entities db=new FinancielCrmDb1Entities();
+        FinancielCrmDb1Entities1 db = new FinancielCrmDb1Entities1();
         int userid;
         public FrmChangePassword(int userid)
         {

@@ -7,20 +7,17 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace FinancielCrm.Models
+namespace FinancielCrm
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class BankProccess
+    public partial class sysdiagram
     {
-        public int BankProccessId { get; set; }
-        public string BankDescription { get; set; }
-        public Nullable<System.DateTime> ProccessDate { get; set; }
-        public string ProccessType { get; set; }
-        public Nullable<decimal> Amount { get; set; }
-        public int BankId { get; set; }
-    
-        public virtual Bank Bank { get; set; }
+        public string name { get; set; }
+        public int principal_id { get; set; }
+        public int diagram_id { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

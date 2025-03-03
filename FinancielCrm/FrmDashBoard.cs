@@ -1,4 +1,4 @@
-﻿using FinancielCrm.Models;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,7 +21,7 @@ namespace FinancielCrm
             userid= id; 
             InitializeComponent();
         }
-        FinancielCrmDb1Entities db=new FinancielCrmDb1Entities();
+        FinancielCrmDb1Entities1 db = new FinancielCrmDb1Entities1();
         int count=1;
         private void FrmDashBoard_Load(object sender, EventArgs e)
         {
@@ -53,11 +53,12 @@ namespace FinancielCrm
 
             #endregion
             #region chart2
-            var values = db.Bills.Select(x => new
-            {
-                x.BillTitle,
-                x.BillAmount,
-            }).ToList();
+           var values=db.Spendings.Where(x=>x.CategoryId==1).ToList();
+           var val2 = db.Spendings.Select(x => new
+           {
+               x.SpendingTitle,
+               x.SpendingAmount,
+           }).ToList();
             chart2.Series.Clear();
             var series2 = chart2.Series.Add("Faturalar");
             
@@ -65,7 +66,7 @@ namespace FinancielCrm
 
             foreach (var item in values) 
             {
-                series2.Points.AddXY(item.BillTitle,item.BillAmount);
+                series2.Points.AddXY(item.SpendingTitle,item.SpendingAmount);
                 
             }
             #endregion
@@ -81,11 +82,12 @@ namespace FinancielCrm
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-
+            var degerler = db.Spendings.Where(x => x.CategoryId == 1).ToList();
             count++;
             if (count % 4 == 0) 
             {
-                var values=db.Bills.Where(x=>x.BillTitle== "Elektrik").Select(x=>x.BillAmount).FirstOrDefault();
+                var values = degerler.Where(y => y.SpendingTitle == "Elektrik").Select(y =>y.SpendingAmount).FirstOrDefault();
+                
                 lbl_fatura.Text = "Elektrik faturası";
                 if (values == null)
                 {
@@ -98,7 +100,7 @@ namespace FinancielCrm
             }
             else if (count % 4 == 1)
             {
-                var values = db.Bills.Where(x => x.BillTitle == "Doğalgaz").Select(x => x.BillAmount).FirstOrDefault();
+                var values = degerler.Where(y => y.SpendingTitle == "Doğalgaz").Select(y => y.SpendingAmount).FirstOrDefault();
                 lbl_fatura.Text = "Doğalgaz faturası";
                 if (values == null)
                 {
@@ -112,7 +114,7 @@ namespace FinancielCrm
             }
             else if(count % 4 == 2) 
             {
-                var values = db.Bills.Where(x => x.BillTitle == "Su").Select(x => x.BillAmount).FirstOrDefault();
+                var values = degerler.Where(y => y.SpendingTitle == "Su").Select(y => y.SpendingAmount).FirstOrDefault();
                 lbl_fatura.Text = "Su faturası";
                 if (values == null)
                 {
@@ -125,7 +127,7 @@ namespace FinancielCrm
             }
             else if (count % 4 == 3)
             {
-                var values = db.Bills.Where(x => x.BillTitle == "İnternet").Select(x => x.BillAmount).FirstOrDefault();
+                var values = degerler.Where(y => y.SpendingTitle == "İnternet").Select(y => y.SpendingAmount).FirstOrDefault();
                 lbl_fatura.Text = "İnternet faturası";
                 if (values == null)
                 {

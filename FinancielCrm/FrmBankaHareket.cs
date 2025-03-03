@@ -1,4 +1,4 @@
-﻿using FinancielCrm.Models;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -88,7 +88,7 @@ namespace FinancielCrm
                 this.Close();
             }
         }
-        FinancielCrmDb1Entities db=new FinancielCrmDb1Entities();
+        FinancielCrmDb1Entities1 db = new FinancielCrmDb1Entities1();
         private void btn_ziraat_Click(object sender, EventArgs e)
         {
             datagrid(1);

@@ -1,4 +1,4 @@
-﻿using FinancielCrm.Models;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,7 +18,7 @@ namespace FinancielCrm
         {
             InitializeComponent();
         }
-        FinancielCrmDb1Entities db =new FinancielCrmDb1Entities();
+        FinancielCrmDb1Entities1 db =new FinancielCrmDb1Entities1();
         private void button3_Click(object sender, EventArgs e)
         {
             var Username = txt_username.Text.ToUpper();

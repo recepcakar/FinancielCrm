@@ -7,25 +7,23 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace FinancielCrm.Models
+namespace FinancielCrm
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Bank
+    public partial class Category
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Bank()
+        public Category()
         {
-            this.BankProccesses = new HashSet<BankProccess>();
+            this.Spendings = new HashSet<Spending>();
         }
     
-        public int BankId { get; set; }
-        public string BankAccauntNumber { get; set; }
-        public string BankTitle { get; set; }
-        public Nullable<decimal> BankBalance { get; set; }
+        public int CategoryId { get; set; }
+        public string CategoryName { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<BankProccess> BankProccesses { get; set; }
+        public virtual ICollection<Spending> Spendings { get; set; }
     }
 }

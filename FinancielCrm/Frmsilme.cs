@@ -1,4 +1,4 @@
-﻿using FinancielCrm.Models;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,7 +19,7 @@ namespace FinancielCrm
             InitializeComponent();
             this.userid = userid;   
         }
-        FinancielCrmDb1Entities db=new FinancielCrmDb1Entities();
+        FinancielCrmDb1Entities1 db = new FinancielCrmDb1Entities1();
         private void Frmsifre_Load(object sender, EventArgs e)
         {
         

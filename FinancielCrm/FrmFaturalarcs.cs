@@ -1,4 +1,4 @@
-﻿using FinancielCrm.Models;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,7 +19,7 @@ namespace FinancielCrm
         {
             InitializeComponent();
         }
-        FinancielCrmDb1Entities db =new FinancielCrmDb1Entities();
+        FinancielCrmDb1Entities1 db = new FinancielCrmDb1Entities1();
         private void btn_LogOut_Click(object sender, EventArgs e)
         {
             DialogResult sonuc = MessageBox.Show("Devam etmek istiyor musunuz?", "Onay", MessageBoxButtons.YesNo);
@@ -117,105 +117,115 @@ namespace FinancielCrm
             }
             */
 
-            var ElektrikValue = db.Bills.Where(x => x.BillTitle == "Elektrik").Select(y => new
+            var degerler = db.Spendings.Where(x => x.CategoryId == 1).ToList();
+            var ElektrikValue = degerler.Where(y => y.SpendingTitle == "Elektrik").Select(y => new
             {
-                y.BillId,
-                y.BillAmount,
-                y.BillPeriod,
+                y.SpendingDate,
+                y.SpendingTitle,
+                y.SpendingId,
+                y.SpendingAmount,
             }).FirstOrDefault();
             if (ElektrikValue != null)
             {
-                lbl_elektrikAmount.Text = ElektrikValue.BillAmount.ToString() + " ₺";
-                lbl_elektriktarih.Text = ElektrikValue.BillPeriod.ToString();
-                elektrikId = ElektrikValue.BillId;
-                btn_Elektrik.Enabled=true;
+                lbl_elektrikAmount.Text = ElektrikValue.SpendingAmount + " ₺";
+                lbl_elektriktarih.Text = ElektrikValue.SpendingDate.ToString();
+                elektrikId = ElektrikValue.SpendingId;
+                btn_Elektrik.Enabled = true;
             }
             else
             {
                 btn_Elektrik.Text = "Ödendi";
                 btn_Elektrik.Enabled = false;
             }
-
-            //dogalgaz
-            var DogalgazValue = db.Bills.Where(x => x.BillTitle == "Doğalgaz").Select(y => new
+            var DogalgazValue = degerler.Where(y => y.SpendingTitle == "Doğalgaz").Select(y => new
             {
-                y.BillId,
-                y.BillAmount,
-                y.BillPeriod,
+                y.SpendingDate,
+                y.SpendingTitle,
+                y.SpendingId,
+                y.SpendingAmount,
             }).FirstOrDefault();
-            if(DogalgazValue != null)
+            if (DogalgazValue != null)
             {
-                lbl_dogalgaztarih.Text = DogalgazValue.BillPeriod.ToString();
-                lbl_DogalgazAmount.Text = DogalgazValue.BillAmount.ToString() + " ₺";
-                DogalgazId = DogalgazValue.BillId;
-                btn_Dogalgaz.Enabled=true;
+                lbl_dogalgaztarih.Text = DogalgazValue.SpendingDate.ToString();
+                lbl_DogalgazAmount.Text = DogalgazValue.SpendingAmount.ToString() + " ₺";
+                DogalgazId = DogalgazValue.SpendingId;
+                btn_Dogalgaz.Enabled = true;
             }
             else
             {
                 btn_Dogalgaz.Text = "Ödendi";
                 btn_Dogalgaz.Enabled = false;
             }
-
-            //SU
-
-            var SuValue = db.Bills.Where(x => x.BillTitle == "Su").Select(y => new
+            var SuValue = degerler.Where(y => y.SpendingTitle == "Su").Select(y => new
             {
-                y.BillId,
-                y.BillAmount,
-                y.BillPeriod,
+                y.SpendingDate,
+                y.SpendingTitle,
+                y.SpendingId,
+                y.SpendingAmount,
             }).FirstOrDefault();
-           if ( SuValue != null)
+            if (SuValue != null)
             {
-                lbl_SuAmount.Text = SuValue.BillAmount.ToString() + " ₺";
-                lbl_SuTarih.Text = SuValue.BillPeriod.ToString();
-                SuId = SuValue.BillId;
-                btn_Su.Enabled=true;
+                lbl_SuAmount.Text = SuValue.SpendingAmount.ToString() + " ₺";
+                lbl_SuTarih.Text = SuValue.SpendingDate.ToString();
+                SuId = SuValue.SpendingId;
+                btn_Su.Enabled = true;
             }
             else
-            {btn_Su.Text = "Ödendi";
+            {
+                btn_Su.Text = "Ödendi";
                 btn_Su.Enabled = false;
             }
-            //int
-
-
-            var IntValue = db.Bills.Where(x => x.BillTitle == "İnternet").Select(y => new
+            var IntValue = degerler.Where(y => y.SpendingTitle == "İnternet").Select(y => new
             {
-                y.BillId,
-                y.BillAmount,
-                y.BillPeriod,
+                y.SpendingDate,
+                y.SpendingTitle,
+                y.SpendingId,
+                y.SpendingAmount,
+
             }).FirstOrDefault();
 
-           if (IntValue != null)
+
+            if (IntValue != null)
             {
-                lbl_IntTarih.Text = IntValue.BillPeriod.ToString();
-                lbl_IntAmount.Text = IntValue.BillAmount.ToString() + " ₺";
-                IntId = IntValue.BillId;
-                btn_Int.Enabled =true;
-            }
-            else
-            {
-                btn_Int.Text = "Ödendi";
-                btn_Int.Enabled = false;
-            }
-            //tel
-            var TelValue = db.Bills.Where(x => x.BillTitle == "Telefon").Select(y => new
-            {
-                y.BillId,
-                y.BillAmount,
-                y.BillPeriod,
-            }).FirstOrDefault();
-            if (TelValue != null)
-            {
-                lbl_TelAmount.Text = TelValue.BillAmount.ToString() + " ₺";
-                LBL_TelTarih.Text = TelValue.BillPeriod;
-                TelId = TelValue.BillId;
-                btn_Tel.Enabled=true;
+                lbl_TelAmount.Text = IntValue.SpendingAmount.ToString() + " ₺";
+                LBL_TelTarih.Text = IntValue.SpendingDate.ToString();
+                TelId = IntValue.SpendingId;
+                btn_Tel.Enabled = true;
             }
             else
             {
                 btn_Tel.Text = "Ödendi";
-               btn_Tel.Enabled = false;
+                btn_Tel.Enabled = false;
             }
+            var TelValue = degerler.Where(y => y.SpendingTitle == "Telefon").Select(y => new
+            {
+                y.SpendingDate,
+                y.SpendingTitle,
+                y.SpendingId,
+                y.SpendingAmount,
+            }).FirstOrDefault();
+
+            if (TelValue != null)
+            {
+                lbl_TelAmount.Text = TelValue.SpendingAmount.ToString() + " ₺";
+                LBL_TelTarih.Text = TelValue.SpendingDate.ToString();
+                TelId = TelValue.SpendingId;
+                btn_Tel.Enabled = true;
+            }
+            else
+            {
+                btn_Tel.Text = "Ödendi";
+                btn_Tel.Enabled = false;
+            }
+
+
+
+            //int
+
+
+
+
+
         }
 
 
@@ -256,8 +266,8 @@ namespace FinancielCrm
         {
             try
             {
-                var removeValue = db.Bills.Find(ıd);
-                db.Bills.Remove(removeValue);
+                var removeValue = db.Spendings.Find(ıd);
+                db.Spendings.Remove(removeValue);
                 db.SaveChanges();
 
              
@@ -332,12 +342,12 @@ namespace FinancielCrm
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Bill bill = new Bill();
-            bill.BillTitle=comboBox1.Text;
-            bill.BillAmount=numericUpDown1.Value;
-            bill.BillPeriod=txt_Date.Text;
-            bill.CategoryId = 1;
-            db.Bills.Add(bill);
+           Spending spending = new Spending();
+            spending.SpendingTitle = comboBox1.Text;
+            spending.SpendingAmount=numericUpDown1.Value;
+            spending .SpendingDate= Convert.ToDateTime(txt_Date.Text);
+            spending.CategoryId = 1;
+         db.Spendings.Add(spending);
             db.SaveChanges();
             YenidenYukle();
         }

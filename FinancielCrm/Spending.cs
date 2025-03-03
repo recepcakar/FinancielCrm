@@ -7,13 +7,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace FinancielCrm.Models
+namespace FinancielCrm
 {
     using System;
+    using System.Collections.Generic;
     
-    public partial class sp_helpdiagramdefinition_Result
+    public partial class Spending
     {
-        public Nullable<int> version { get; set; }
-        public byte[] definition { get; set; }
+        public int SpendingId { get; set; }
+        public Nullable<decimal> SpendingAmount { get; set; }
+        public Nullable<System.DateTime> SpendingDate { get; set; }
+        public string SpendingTitle { get; set; }
+        public Nullable<int> CategoryId { get; set; }
+    
+        public virtual Category Category { get; set; }
     }
 }

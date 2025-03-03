@@ -1,4 +1,4 @@
-﻿using FinancielCrm.Models;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,7 +16,7 @@ namespace FinancielCrm
     public partial class FrmBilling : Form
     {
         int userid;
-        FinancielCrmDb1Entities db = new FinancielCrmDb1Entities();
+        FinancielCrmDb1Entities1 db = new FinancielCrmDb1Entities1();
         public FrmBilling(int id)
         {
             userid = id;
