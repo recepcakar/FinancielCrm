@@ -108,7 +108,7 @@ namespace FinancielCrm
         }
         public void datagrid(int id)
         {
-            var value = db.BankProccesses.Where(x => x.BankId == id).Select(y => new
+            var value = db.BankProccesses.Where(x=>x.UserId==userid).Where(x => x.BankId == id).Select(y => new
             {
                 y.ProccessDate,
                 y.BankDescription,
