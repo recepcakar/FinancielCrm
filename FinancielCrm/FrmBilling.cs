@@ -183,6 +183,7 @@ namespace FinancielCrm
 
                 }
             }
-        }
+        }//projeyi bitirme kararı aldım çünkü başka projelere yönelicem
+
     }
 }
