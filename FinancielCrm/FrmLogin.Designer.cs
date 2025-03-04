@@ -35,12 +35,12 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.txt_username = new System.Windows.Forms.TextBox();
             this.txt_password = new System.Windows.Forms.TextBox();
             this.btn_Login = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_SignUp = new System.Windows.Forms.Button();
             this.linklbl_PasswordLink = new System.Windows.Forms.LinkLabel();
+            this.txt_username = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -100,16 +100,6 @@
             this.button2.Text = "Giriş Yap";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // txt_username
-            // 
-            this.txt_username.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txt_username.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txt_username.Location = new System.Drawing.Point(358, 176);
-            this.txt_username.Name = "txt_username";
-            this.txt_username.Size = new System.Drawing.Size(176, 28);
-            this.txt_username.TabIndex = 4;
-            this.txt_username.Text = "Username";
-            // 
             // txt_password
             // 
             this.txt_password.BackColor = System.Drawing.SystemColors.InactiveCaption;
@@ -119,6 +109,7 @@
             this.txt_password.Size = new System.Drawing.Size(176, 28);
             this.txt_password.TabIndex = 4;
             this.txt_password.Text = "Password";
+            this.txt_password.TextChanged += new System.EventHandler(this.txt_password_TextChanged);
             // 
             // btn_Login
             // 
@@ -173,6 +164,17 @@
             this.linklbl_PasswordLink.Text = "Şifremi unuttum";
             this.linklbl_PasswordLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklbl_PasswordLink_LinkClicked);
             // 
+            // txt_username
+            // 
+            this.txt_username.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txt_username.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txt_username.Location = new System.Drawing.Point(358, 176);
+            this.txt_username.Name = "txt_username";
+            this.txt_username.Size = new System.Drawing.Size(176, 28);
+            this.txt_username.TabIndex = 4;
+            this.txt_username.Text = "Username";
+            this.txt_username.TextChanged += new System.EventHandler(this.txt_username_TextChanged);
+            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -209,11 +211,11 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox txt_username;
         private System.Windows.Forms.TextBox txt_password;
         private System.Windows.Forms.Button btn_Login;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btn_SignUp;
         private System.Windows.Forms.LinkLabel linklbl_PasswordLink;
+        private System.Windows.Forms.TextBox txt_username;
     }
 }

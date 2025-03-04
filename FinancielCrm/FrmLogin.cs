@@ -21,10 +21,10 @@ namespace FinancielCrm
         FinancielCrmDb1Entities1 db =new FinancielCrmDb1Entities1();
         private void button3_Click(object sender, EventArgs e)
         {
-            var Username = txt_username.Text.ToUpper();
+            var Username = txt_username.Text;
             var Password = txt_password.Text;
 
-            var user = db.Users.FirstOrDefault(x => x.UserName.ToUpper() == Username && x.Password == Password);
+            var user = db.Users.FirstOrDefault(x => x.UserName== Username && x.Password == Password);
 
             if (user != null)
             {
@@ -53,6 +53,16 @@ namespace FinancielCrm
         {
             FrmKayit frmKayit = new FrmKayit();
             frmKayit.Show();
+        }
+
+        private void txt_username_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txt_password_TextChanged(object sender, EventArgs e)
+        {
+           
         }
     }
 }

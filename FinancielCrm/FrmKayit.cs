@@ -21,7 +21,7 @@ namespace FinancielCrm
         private void btn_Add_Click(object sender, EventArgs e)
         {
             User user = new User();
-            user.UserName=txt_UserName.Text.ToUpper();
+            user.UserName=txt_UserName.Text;
             user.Password=txt_Password.Text;
             db.Users.Add(user);
             db.SaveChanges();
