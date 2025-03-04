@@ -20,7 +20,9 @@ namespace FinancielCrm
         public string ProccessType { get; set; }
         public Nullable<decimal> Amount { get; set; }
         public int BankId { get; set; }
+        public int UserId { get; set; }
     
         public virtual Bank Bank { get; set; }
+        public virtual User User { get; set; }
     }
 }

@@ -15,6 +15,7 @@
           <Property Name="ProccessType" Type="nvarchar" MaxLength="50" />
           <Property Name="Amount" Type="decimal" Precision="18" Scale="2" />
           <Property Name="BankId" Type="int" Nullable="false" />
+          <Property Name="UserId" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Banks">
           <Key>
@@ -24,6 +25,7 @@
           <Property Name="BankAccauntNumber" Type="nvarchar" MaxLength="50" />
           <Property Name="BankTitle" Type="nvarchar" MaxLength="50" />
           <Property Name="BankBalance" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="UserId" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Categories">
           <Key>
@@ -41,6 +43,7 @@
           <Property Name="SpendingDate" Type="date" />
           <Property Name="SpendingTitle" Type="nvarchar" MaxLength="50" />
           <Property Name="CategoryId" Type="int" />
+          <Property Name="UserId" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -72,7 +75,31 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Spendings_Categories">
+        <Association Name="FK_BankProccesses_Users">
+          <End Role="Users" Type="Self.Users" Multiplicity="1" />
+          <End Role="BankProccesses" Type="Self.BankProccesses" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="BankProccesses">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Banks_Users">
+          <End Role="Users" Type="Self.Users" Multiplicity="1" />
+          <End Role="Banks" Type="Self.Banks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Banks">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Spendings_Categories1">
           <End Role="Categories" Type="Self.Categories" Multiplicity="0..1" />
           <End Role="Spendings" Type="Self.Spendings" Multiplicity="*" />
           <ReferentialConstraint>
@@ -81,6 +108,18 @@
             </Principal>
             <Dependent Role="Spendings">
               <PropertyRef Name="CategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Spendings_Users">
+          <End Role="Users" Type="Self.Users" Multiplicity="1" />
+          <End Role="Spendings" Type="Self.Spendings" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Spendings">
+              <PropertyRef Name="UserId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -95,8 +134,20 @@
             <End Role="Banks" EntitySet="Banks" />
             <End Role="BankProccesses" EntitySet="BankProccesses" />
           </AssociationSet>
-          <AssociationSet Name="FK_Spendings_Categories" Association="Self.FK_Spendings_Categories">
+          <AssociationSet Name="FK_BankProccesses_Users" Association="Self.FK_BankProccesses_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="BankProccesses" EntitySet="BankProccesses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Banks_Users" Association="Self.FK_Banks_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Banks" EntitySet="Banks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Spendings_Categories1" Association="Self.FK_Spendings_Categories1">
             <End Role="Categories" EntitySet="Categories" />
+            <End Role="Spendings" EntitySet="Spendings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Spendings_Users" Association="Self.FK_Spendings_Users">
+            <End Role="Users" EntitySet="Users" />
             <End Role="Spendings" EntitySet="Spendings" />
           </AssociationSet>
         </EntityContainer>
@@ -115,7 +166,9 @@
           <Property Name="ProccessType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Amount" Type="Decimal" Precision="18" Scale="2" />
           <Property Name="BankId" Type="Int32" Nullable="false" />
+          <Property Name="UserId" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Bank" Relationship="Self.FK_BankProccesses_Banks" FromRole="BankProccesses" ToRole="Banks" />
+          <NavigationProperty Name="User" Relationship="Self.FK_BankProccesses_Users" FromRole="BankProccesses" ToRole="Users" />
         </EntityType>
         <EntityType Name="Bank">
           <Key>
@@ -125,7 +178,9 @@
           <Property Name="BankAccauntNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="BankTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="BankBalance" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="UserId" Type="Int32" Nullable="false" />
           <NavigationProperty Name="BankProccesses" Relationship="Self.FK_BankProccesses_Banks" FromRole="Banks" ToRole="BankProccesses" />
+          <NavigationProperty Name="User" Relationship="Self.FK_Banks_Users" FromRole="Banks" ToRole="Users" />
         </EntityType>
         <EntityType Name="Category">
           <Key>
@@ -133,7 +188,7 @@
           </Key>
           <Property Name="CategoryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="CategoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Spendings" Relationship="Self.FK_Spendings_Categories" FromRole="Categories" ToRole="Spendings" />
+          <NavigationProperty Name="Spendings" Relationship="Self.FK_Spendings_Categories1" FromRole="Categories" ToRole="Spendings" />
         </EntityType>
         <EntityType Name="Spending">
           <Key>
@@ -144,7 +199,9 @@
           <Property Name="SpendingDate" Type="DateTime" Precision="0" />
           <Property Name="SpendingTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="CategoryId" Type="Int32" />
-          <NavigationProperty Name="Category" Relationship="Self.FK_Spendings_Categories" FromRole="Spendings" ToRole="Categories" />
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Category" Relationship="Self.FK_Spendings_Categories1" FromRole="Spendings" ToRole="Categories" />
+          <NavigationProperty Name="User" Relationship="Self.FK_Spendings_Users" FromRole="Spendings" ToRole="Users" />
         </EntityType>
         <EntityType Name="sysdiagram">
           <Key>
@@ -163,6 +220,9 @@
           <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="BankProccesses" Relationship="Self.FK_BankProccesses_Users" FromRole="Users" ToRole="BankProccesses" />
+          <NavigationProperty Name="Banks" Relationship="Self.FK_Banks_Users" FromRole="Users" ToRole="Banks" />
+          <NavigationProperty Name="Spendings" Relationship="Self.FK_Spendings_Users" FromRole="Users" ToRole="Spendings" />
         </EntityType>
         <Association Name="FK_BankProccesses_Banks">
           <End Role="Banks" Type="Self.Bank" Multiplicity="1" />
@@ -176,7 +236,31 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Spendings_Categories">
+        <Association Name="FK_BankProccesses_Users">
+          <End Role="Users" Type="Self.User" Multiplicity="1" />
+          <End Role="BankProccesses" Type="Self.BankProccess" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="BankProccesses">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Banks_Users">
+          <End Role="Users" Type="Self.User" Multiplicity="1" />
+          <End Role="Banks" Type="Self.Bank" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Banks">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Spendings_Categories1">
           <End Role="Categories" Type="Self.Category" Multiplicity="0..1" />
           <End Role="Spendings" Type="Self.Spending" Multiplicity="*" />
           <ReferentialConstraint>
@@ -185,6 +269,18 @@
             </Principal>
             <Dependent Role="Spendings">
               <PropertyRef Name="CategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Spendings_Users">
+          <End Role="Users" Type="Self.User" Multiplicity="1" />
+          <End Role="Spendings" Type="Self.Spending" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Spendings">
+              <PropertyRef Name="UserId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -199,8 +295,20 @@
             <End Role="Banks" EntitySet="Banks" />
             <End Role="BankProccesses" EntitySet="BankProccesses" />
           </AssociationSet>
-          <AssociationSet Name="FK_Spendings_Categories" Association="Self.FK_Spendings_Categories">
+          <AssociationSet Name="FK_BankProccesses_Users" Association="Self.FK_BankProccesses_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="BankProccesses" EntitySet="BankProccesses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Banks_Users" Association="Self.FK_Banks_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Banks" EntitySet="Banks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Spendings_Categories1" Association="Self.FK_Spendings_Categories1">
             <End Role="Categories" EntitySet="Categories" />
+            <End Role="Spendings" EntitySet="Spendings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Spendings_Users" Association="Self.FK_Spendings_Users">
+            <End Role="Users" EntitySet="Users" />
             <End Role="Spendings" EntitySet="Spendings" />
           </AssociationSet>
         </EntityContainer>
@@ -219,6 +327,7 @@
                 <ScalarProperty Name="ProccessType" ColumnName="ProccessType" />
                 <ScalarProperty Name="Amount" ColumnName="Amount" />
                 <ScalarProperty Name="BankId" ColumnName="BankId" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -229,6 +338,7 @@
                 <ScalarProperty Name="BankAccauntNumber" ColumnName="BankAccauntNumber" />
                 <ScalarProperty Name="BankTitle" ColumnName="BankTitle" />
                 <ScalarProperty Name="BankBalance" ColumnName="BankBalance" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -248,6 +358,7 @@
                 <ScalarProperty Name="SpendingDate" ColumnName="SpendingDate" />
                 <ScalarProperty Name="SpendingTitle" ColumnName="SpendingTitle" />
                 <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

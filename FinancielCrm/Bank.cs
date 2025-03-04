@@ -24,8 +24,10 @@ namespace FinancielCrm
         public string BankAccauntNumber { get; set; }
         public string BankTitle { get; set; }
         public Nullable<decimal> BankBalance { get; set; }
+        public int UserId { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<BankProccess> BankProccesses { get; set; }
+        public virtual User User { get; set; }
     }
 }

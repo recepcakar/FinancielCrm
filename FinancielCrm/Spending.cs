@@ -19,7 +19,9 @@ namespace FinancielCrm
         public Nullable<System.DateTime> SpendingDate { get; set; }
         public string SpendingTitle { get; set; }
         public Nullable<int> CategoryId { get; set; }
+        public int UserId { get; set; }
     
         public virtual Category Category { get; set; }
+        public virtual User User { get; set; }
     }
 }

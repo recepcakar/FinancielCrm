@@ -24,36 +24,55 @@ namespace FinancielCrm
         FinancielCrmDb1Entities1 db = new FinancielCrmDb1Entities1();
         int count=1;
         private void FrmDashBoard_Load(object sender, EventArgs e)
-        {
-            var TotalPrice = db.Banks.Sum(x => x.BankBalance);
-            lbl_TotalBalance.Text = TotalPrice.ToString()+" ₺";
+        {   
+            var value=db.Banks.Where(x=>x.UserId==userid).Sum(x => x.BankBalance);
+            if (value != null)
+            {
+                lbl_TotalBalance.Text = value.ToString() + " ₺";
+            }
+            else
+            {
+                lbl_TotalBalance.Text = " 1.00 ₺";
+            }
 
             //  Gelen Son havale kısmını 
 
-            var sonhavale=db.BankProccesses.OrderByDescending(x=>x.BankProccessId).Take(1).Select(y=>y.Amount).FirstOrDefault();
+            var sonhavale=db.BankProccesses.Where(x=>x.UserId==userid).OrderByDescending(x=>x.BankProccessId).Take(1).Select(y=>y.Amount).FirstOrDefault();
             lbl_GelenHavale.Text = sonhavale.ToString()+" ₺";
 
 
             #region chart1
             //BURADA CHART 1 KODLARINI YAZIYORUM
 
-            var BankData = db.Banks.Select(x => new
+            var BankData1 = db.Banks.Where(x => x.UserId == userid);
+            var BankData=BankData1.Select(x => new
             {
                 x.BankTitle,
                 x.BankBalance,
             }).ToList();
             chart1.Series.Clear();
-            var series = chart1.Series.Add("Bankalar");
-            series.ChartType=SeriesChartType.Doughnut;
-           // series.Points.AddXY(BankData.Select(x=>x.BankTitle),BankData.Select(y=>y.BankBalance));
-           foreach(var item in BankData)
+            
+            if (BankData != null)
             {
-                series.Points.AddXY(item.BankTitle,item.BankBalance);
+                var series = chart1.Series.Add("Bankalar");
+                series.ChartType = SeriesChartType.Doughnut;
+                // series.Points.AddXY(BankData.Select(x=>x.BankTitle),BankData.Select(y=>y.BankBalance));
+                foreach (var item in BankData)
+                {
+                    series.Points.AddXY(item.BankTitle, item.BankBalance);
+                }
             }
+            else
+            {
+                var emptySeries = chart1.Series.Add("Veri Yok");
+                emptySeries.Points.AddY(0); // Boş bir veri noktası ekleme
+                emptySeries.ChartType = SeriesChartType.Doughnut;
+            }
+          
 
             #endregion
             #region chart2
-           var values=db.Spendings.Where(x=>x.CategoryId==1).ToList();
+           var values=db.Spendings.Where(x => x.UserId == userid).Where(x=>x.CategoryId==1).ToList();
            var val2 = db.Spendings.Select(x => new
            {
                x.SpendingTitle,
@@ -82,11 +101,11 @@ namespace FinancielCrm
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            var degerler = db.Spendings.Where(x => x.CategoryId == 1).ToList();
+            var degerler = db.Spendings.Where(x => x.CategoryId == 1 && x.UserId==userid).ToList();
             count++;
             if (count % 4 == 0) 
             {
-                var values = degerler.Where(y => y.SpendingTitle == "Elektrik").Select(y =>y.SpendingAmount).FirstOrDefault();
+                var values = degerler.Where(x => x.UserId == userid).Where(y => y.SpendingTitle == "Elektrik").Select(y =>y.SpendingAmount).FirstOrDefault();
                 
                 lbl_fatura.Text = "Elektrik faturası";
                 if (values == null)
@@ -100,7 +119,7 @@ namespace FinancielCrm
             }
             else if (count % 4 == 1)
             {
-                var values = degerler.Where(y => y.SpendingTitle == "Doğalgaz").Select(y => y.SpendingAmount).FirstOrDefault();
+                var values = degerler.Where(x => x.UserId == userid).Where(y => y.SpendingTitle == "Doğalgaz").Select(y => y.SpendingAmount).FirstOrDefault();
                 lbl_fatura.Text = "Doğalgaz faturası";
                 if (values == null)
                 {
@@ -114,7 +133,7 @@ namespace FinancielCrm
             }
             else if(count % 4 == 2) 
             {
-                var values = degerler.Where(y => y.SpendingTitle == "Su").Select(y => y.SpendingAmount).FirstOrDefault();
+                var values = degerler.Where(x => x.UserId == userid).Where(y => y.SpendingTitle == "Su").Select(y => y.SpendingAmount).FirstOrDefault();
                 lbl_fatura.Text = "Su faturası";
                 if (values == null)
                 {
@@ -127,7 +146,7 @@ namespace FinancielCrm
             }
             else if (count % 4 == 3)
             {
-                var values = degerler.Where(y => y.SpendingTitle == "İnternet").Select(y => y.SpendingAmount).FirstOrDefault();
+                var values = degerler.Where(x => x.UserId == userid).Where(y => y.SpendingTitle == "İnternet").Select(y => y.SpendingAmount).FirstOrDefault();
                 lbl_fatura.Text = "İnternet faturası";
                 if (values == null)
                 {
